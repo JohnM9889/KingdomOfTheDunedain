@@ -294,7 +294,7 @@ soldier					Norse_Swordsmen, 70, 0, 1
 officer					gondor_captain_early_flag
 officer					gondor_dol_amroth_banner_carrier
 mount_effect			horse -2, camel -3, elephant -4
-attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, legionary_name
+attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, legionary_name, no_custom
 formation				1.4, 1.4, 2.8, 2.8, 7, square
 stat_health				1, 1
 stat_pri				6, 5, no, 0, 0, melee, melee_blade, piercing, sword, 20, 1
@@ -331,7 +331,7 @@ soldier					militia_archers, 60, 0, 1
 officer					gondor_captain_early_flag
 officer					gondor_dol_amroth_banner_carrier
 mount_effect			horse -2, camel -3, elephant -4
-attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, start_not_skirmishing, legionary_name
+attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, start_not_skirmishing, legionary_name, no_custom 
 formation				1.4, 1.4, 2.8, 2.8, 6, square
 stat_health				1, 1
 stat_pri				3, 2, militia_arrow, 150, 18, missile, missile_mechanical, piercing, none, 40, 1
@@ -811,7 +811,7 @@ officer					gondor_dol_amroth_banner_carrier
 officer                 gondor_captain_early_flag
 mount					northern heavy horse
 mount_effect			camel -2, elephant -3, horse -1
-attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, legionary_name
+attributes				sea_faring, hide_forest, can_withdraw, free_upkeep_unit, legionary_name, no_custom 
 formation				2, 4.4, 3, 6, 3, square
 stat_health				1, 6
 stat_pri				4, 6, no, 0, 0, melee, melee_blade, piercing, spear, 60, 1
