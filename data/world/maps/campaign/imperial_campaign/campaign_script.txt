@@ -5298,18 +5298,6 @@ script
                 siege_settlement ootmm_attackers_2, High_Pass, attack
 		    end_if
 		end_if
-        if I_IsFactionAIControlled denmark	
-            if I_SettlementOwner Anduin_Straits = slave
-                spawn_army
-                    faction denmark
-                    character	random_name, named character, age 26, x 305, y 170, family, direction E, label DA_attackers_1
-                    traits		DunedainRace 1, Amrothian 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                    unit		Royal Swan-Guard     			exp 2 armour 1 weapon_lvl 0
-                end
-                console_command auto_win attacker
-                siege_settlement DA_attackers_1, Anduin_Straits, attack
-            end_if
-        end_if
         if I_IsFactionAIControlled ireland
             if I_SettlementOwner Border = slave
                 spawn_army
@@ -8569,15 +8557,6 @@ end_monitor
                     unit		Gondor Bodyguard					exp 3 armour 1 weapon_lvl 1
                 end
             end_if
-            if I_CharacterExists mistven_1
-                kill_character mistven_1
-                spawn_army
-                    faction turks
-                    character	Mistven, named character, age 31, x 251, y 202, portrait Mistven, label mistven_rk
-                    traits		DunedainRace 1, Amrothian 1, BattleChivalryGood 2, Brave 1, Loyal 1, GoodAttacker 2, GoodCommander 1, GoodAmbusher 2, Scout 2, NightBattleCapable 1, LoyaltyStarter 1, PietyStarter 1, UpgradedND 1
-                    unit		Nimrodel Mariners				    exp 2 armour 0 weapon_lvl 0
-                end
-            end_if
             if I_CharacterExists adrahil_1
                 kill_character adrahil_1
                 spawn_army
@@ -8585,24 +8564,6 @@ end_monitor
                     character	Adrahil, named character, age 73, x 243, y 189, family, portrait Adrahil, hero_ability IRON_FIST, label adrahil_rk
                     traits		AdrahilRk 1, CustomBG 1, Hero 1, DunedainRace 1, Amrothian 1, HeroAbilityIronFist 1, BattleChivalryGood 1, GoodCommander 2, GoodDefender 1, Just 1, KindRuler 1, PietyStarter 1, StrategyChivalryGood 3, NaturalMilitarySkill 1
                     unit		Talon Knights				    exp 4 armour 0 weapon_lvl 1
-                end
-            end_if
-            if I_CharacterExists imrahil_1
-                kill_character imrahil_1
-                spawn_army
-                    faction turks
-                    character	Imrahil, named character, age 35, x 254, y 169, family, portrait Imrahil, hero_ability IRON_FIST, label imrahil_rk
-                    traits		ImrahilRk 1, CustomBG 1, Hero 1, DunedainRace 1, Amrothian 1, HeroAbilityIronFist 1, BattleChivalryGood 2, GoodCommander 3, GoodDefender 1, HaleAndHearty 2, Just 2, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 2, TacticalSkill 1, NaturalMilitarySkill 1, TourneyKnight 3
-                    unit		Royal Swan-Guard         			exp 3 armour 1 weapon_lvl 1
-                end
-            end_if
-            if I_CharacterExists istion_1
-                kill_character istion_1
-                spawn_army
-                    faction turks
-                    character	Istion, named character, age 39, x 264, y 182, portrait Istdor, label istion_rk
-                    traits		CustomBG 1, DunedainRace 1, Amrothian 1, BattleChivalryGood 1, Brave 2, GoodAttacker 2, GoodCommander 2, SiegeDefender 1, LoyaltyStarter 1, PietyStarter 1, TourneyKnight 2, AmrothStratRk 1
-                    unit		Royal Swan-Guard				    exp 2 armour 0 weapon_lvl 0
                 end
             end_if
             if I_CharacterExists dinenion_1
@@ -8659,15 +8620,6 @@ end_monitor
                     unit		Royal Swan-Guard					exp 2 armour 1 weapon_lvl 0
                 end
             end_if
-            if I_CharacterExists baragund_1
-                kill_character baragund_1
-                spawn_army
-                    faction turks
-                    character	Baragund, named character, age 32, x 270, y 163, portrait Baragund
-                    traits		CustomBG 1, DunedainRace 1, Amrothian 1, GoodCommander 1, GoodTrader 1, KindRuler 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1, AmrothStratRk 1
-                    unit		Sea-ward Spearmen	    exp 1 armour 1 weapon_lvl 0
-                end
-            end_if
             if I_CharacterExists orodreth_1
                 kill_character orodreth_1
                 spawn_army
@@ -8707,13 +8659,6 @@ end_monitor
                 console_command give_ancillary adrahil_rk prince_dol_amroth
                 console_command give_ancillary adrahil_rk veteran_officer
                 console_command give_ancillary adrahil_rk da_shield
-            end_if
-            if I_CharacterExists imrahil_rk
-                console_command give_ancillary imrahil_rk knight_armour
-                console_command give_ancillary imrahil_rk war_horse
-            end_if
-            if I_CharacterExists istion_rk
-                console_command give_ancillary istion_rk lance
             end_if
             if I_CharacterExists duinhir_rk
                 console_command give_ancillary duinhir_rk lord_morthond
@@ -14488,39 +14433,6 @@ end_monitor
                 unit		Vineyard Levies					exp 2 armour 2 weapon_lvl 1
                 unit		Vineyard Bowmen		exp 2 armour 2 weapon_lvl 0
                 unit		Vineyard Bowmen		exp 2 armour 2 weapon_lvl 0				
-            end
-            terminate_monitor
-        end_if
-    end_monitor
-
-    monitor_event FactionTurnStart FactionType denmark
-        if not I_IsFactionAIControlled denmark
-            terminate_monitor
-        end_if
-        if I_NumberOfSettlements denmark <= 2
-            historic_event last_stand_da
-            spawn_army
-                faction denmark
-                character	random_name, named character, age 26, x 245, y 181, family, direction NE
-                traits		DunedainRace 1, Amrothian 1, AIBoost 1, GoodCommander 2, GoodDefender 2, KindRuler 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
-                unit		Royal Swan-Guard				exp 5 armour 1 weapon_lvl 1
-                unit		Knights of the Silver Swan		exp 5 armour 1 weapon_lvl 1
-                unit		White Knights					exp 4 armour 1 weapon_lvl 0
-                unit		Tirith Aear Knights				exp 4 armour 1 weapon_lvl 0				
-                unit		Sea-ward Lancers				exp 3 armour 0 weapon_lvl 0
-                unit		Sea-ward Lancers				exp 3 armour 0 weapon_lvl 0
-                unit		Sea-ward Footmen				exp 3 armour 0 weapon_lvl 1
-                unit		Sea-ward Footmen				exp 3 armour 0 weapon_lvl 1
-                unit		Sea-ward Spearmen				exp 3 armour 0 weapon_lvl 1
-                unit		Sea-ward Spearmen				exp 3 armour 0 weapon_lvl 1
-                unit		Nimrodel Mariners				exp 3 armour 1 weapon_lvl 1
-                unit		Amrothian Archers				exp 2 armour 0 weapon_lvl 0
-                unit		Amrothian Archers				exp 2 armour 0 weapon_lvl 0
-                unit		Amrothian Pikemen				exp 2 armour 0 weapon_lvl 0
-                unit		Amrothian Pikemen				exp 2 armour 0 weapon_lvl 0
-                unit		Amrothian Pikemen				exp 2 armour 0 weapon_lvl 0
-                unit		Coastal Wardens					exp 1 armour 2 weapon_lvl 0
-                unit		Coastal Wardens					exp 1 armour 2 weapon_lvl 0
             end
             terminate_monitor
         end_if

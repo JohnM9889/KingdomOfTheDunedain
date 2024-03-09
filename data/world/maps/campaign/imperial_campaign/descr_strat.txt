@@ -1671,6 +1671,105 @@ settlement castle
 		type temple_c_gondor_academic gondor_alchemists_lab
 	}
 }
+settlement castle
+{
+	level town
+	region Methrast_Province
+
+	year_founded 0
+	population 2284
+	plan_set default_set
+	faction_creator sicily
+
+	building
+	{
+		type hinterland_green_book_07 green_book_belfalas
+	}
+	building
+	{
+		type core_castle_building wooden_castle
+	}
+	building
+	{
+		type castle_hall c_town_hall
+	}
+	building
+	{
+		type hinterland_farms farms
+	}
+	building
+	{
+		type castle_barracks garrison_quarters
+	}
+	building
+	{
+		type c_equestrian c_stables
+	}
+	building
+	{
+		type smith blacksmith
+	}
+	building
+	{
+		type castle_port c_port
+	}
+	building
+	{
+		type hinterland_roads paved_roads
+	}
+	building
+	{
+		type temple_c_gondor_academic gondor_alchemists_lab
+	}
+}
+
+settlement
+{
+	level town
+	region West_Lebennin_Province
+
+	year_founded 0
+	population 2818
+	plan_set default_set
+	faction_creator denmark
+
+	building
+	{
+		type hinterland_green_book_07 green_book_belfalas
+	}
+	building
+	{
+		type core_building wooden_pallisade
+	}
+	building
+	{
+		type equestrian stables
+	}
+	building
+	{
+		type city_hall town_hall
+	}	
+	building
+	{
+		type hinterland_farms farms
+	}
+	building
+	{
+		type market corn_exchange
+	}
+	building
+	{
+		type taverns brothel
+	}
+	building
+	{
+		type hinterland_roads roads
+	}
+	building
+	{
+		type temple_gondor_academic gondor_alchemists_lab
+	}
+}
 
 character	Denethor, named character, male, leader, age 50, x 324, y 217, portrait Denethor, battle_model denethor, hero_ability IRON_FIST, label denethor_1
 traits		Denethor 1, CustomBG 1, Hero 1, DunedainRace 1, Gondorian 1, FactionLeaderCustom 1, HeroAbilityIronFist 1, RenownLegacy 1, GoodCommander 2, NaturalMilitarySkill 1, PoliticsSkill 2, PietyStarter 1, AnorStone 1
@@ -1899,185 +1998,6 @@ settlement castle
 	}
 }
 
-settlement castle
-{
-	level town
-	region Methrast_Province
-
-	year_founded 0
-	population 2284
-	plan_set default_set
-	faction_creator sicily
-
-	building
-	{
-		type hinterland_green_book_07 green_book_belfalas
-	}
-	building
-	{
-		type core_castle_building wooden_castle
-	}
-	building
-	{
-		type castle_hall c_town_hall
-	}
-	building
-	{
-		type hinterland_farms farms
-	}
-	building
-	{
-		type castle_barracks garrison_quarters
-	}
-	building
-	{
-		type c_equestrian c_stables
-	}
-	building
-	{
-		type smith blacksmith
-	}
-	building
-	{
-		type castle_port c_port
-	}
-	building
-	{
-		type hinterland_roads paved_roads
-	}
-	building
-	{
-		type temple_c_gondor_academic gondor_alchemists_lab
-	}
-}
-
-settlement
-{
-	level town
-	region West_Lebennin_Province
-
-	year_founded 0
-	population 2818
-	plan_set default_set
-	faction_creator denmark
-
-	building
-	{
-		type hinterland_green_book_07 green_book_belfalas
-	}
-	building
-	{
-		type core_building wooden_pallisade
-	}
-	building
-	{
-		type equestrian stables
-	}
-	building
-	{
-		type city_hall town_hall
-	}	
-	building
-	{
-		type hinterland_farms farms
-	}
-	building
-	{
-		type market corn_exchange
-	}
-	building
-	{
-		type taverns brothel
-	}
-	building
-	{
-		type hinterland_roads roads
-	}
-	building
-	{
-		type temple_gondor_academic gondor_alchemists_lab
-	}
-}
-
-settlement castle
-{
-	level large_town
-	region Tolfalas_Province
-
-	year_founded 0
-	population 267
-	plan_set default_set
-	faction_creator scripts
-	building
-	{
-		type hinterland_green_book_08 green_book_Tolfalas
-	}
-	building
-	{
-		type core_castle_building castle
-	}
-	building
-	{
-		type castle_port c_port
-	}
-	building
-	{
-		type hinterland_farms farms
-	}
-	building
-	{
-		type temple_c_gondor_academic gondor_alchemists_lab
-	}
-}
-
-settlement
-{
-	level city
-	region Edhellond_Province
-
-	year_founded 0
-	population 355
-	plan_set default_set
-	faction_creator scripts
-
-	building
-	{
-		type hinterland_green_book_07 green_book_belfalas
-	}
-	building
-	{
-		type core_building stone_wall
-	}
-	building
-	{
-		type port dockyard
-	}
-	building
-	{
-		type city_hall town_hall
-	}	
-	building
-	{
-		type hinterland_farms farms
-	}
-	building
-	{
-		type market corn_exchange
-	}
-	building
-	{
-		type taverns brothel
-	}
-	building
-	{
-		type hinterland_roads roads
-	}
-	building
-	{
-		type temple_gondor_academic gondor_alchemists_lab
-	}
-}
-
 character	Adrahil, named character, male, leader, age 63, x 243, y 189, portrait Adrahil, hero_ability IRON_FIST, label adrahil_1
 traits		Adrahil 1, Hero 1, DunedainRace 1, Amrothian 1, FactionLeader 1, HeroAbilityIronFist 1, BattleChivalryGood 1, GoodCommander 2, GoodDefender 1, Just 1, KindRuler 1, PietyStarter 1, StrategyChivalryGood 3, NaturalMilitarySkill 1
 ancillaries	prince_dol_amroth, veteran_officer, da_shield
@@ -2085,57 +2005,6 @@ army
 unit		Talon Knights				    exp 4 armour 0 weapon_lvl 1
 unit		Amrothian Guardsmen				exp 1 armour 2 weapon_lvl 0
 unit		Amrothian Guardsmen				exp 1 armour 2 weapon_lvl 0
-
-character	Imrahil, named character, male, heir, age 25, x 254, y 169, portrait Imrahil, hero_ability IRON_FIST, label imrahil_1
-traits		Imrahil 1, Hero 1, DunedainRace 1, Amrothian 1, FactionHeir 1, HeroAbilityIronFist 1, BattleChivalryGood 2, GoodCommander 3, GoodDefender 1, HaleAndHearty 2, Just 2, Loyal 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 2, TacticalSkill 1, NaturalMilitarySkill 1, TourneyKnight 3
-ancillaries	knight_armour, war_horse
-army
-unit		Royal Swan-Guard         			exp 3 armour 1 weapon_lvl 1
-unit		Amrothian Archers					exp 1 armour 0 weapon_lvl 1
-
-character	Amandir, named character, male, age 38, x 283, y 188, portrait Amandir
-traits		DunedainRace 1, Amrothian 1, GoodCommander 1, GoodTrader 1, KindRuler 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
-ancillaries	dol_amroth_officer
-army
-unit		Royal Swan-Guard				    exp 2 armour 0 weapon_lvl 0
-
-character	Baragund, named character, male, age 21, x 251, y 202, portrait Baragund, label baragund_1
-traits		DunedainRace 1, Amrothian 1, BattleChivalryGood 2, Brave 1, Loyal 1, GoodAttacker 2, GoodCommander 1, GoodAmbusher 2, Scout 2, NightBattleCapable 1, LoyaltyStarter 1, PietyStarter 1
-army
-unit		Nimrodel Mariners				    exp 2 armour 0 weapon_lvl 0
-unit		Nimrodel Mariners				    exp 2 armour 0 weapon_lvl 0
-unit		Nimrodel Mariners				    exp 2 armour 0 weapon_lvl 0
-
-character	Istion, named character, male, age 29, x 264, y 182, portrait Istdor, label istion_1
-traits		DunedainRace 1, Amrothian 1, BattleChivalryGood 1, Brave 2, GoodAttacker 2, GoodCommander 2, SiegeDefender 1, LoyaltyStarter 1, PietyStarter 1, TourneyKnight 2
-ancillaries lance
-army
-unit		Royal Swan-Guard				    exp 2 armour 0 weapon_lvl 0
-
-character	Mistven, named character, male, age 22, x 270, y 163, portrait Mistven, label mistven_1
-traits		DunedainRace 1, Amrothian 1, GoodCommander 1, GoodTrader 1, KindRuler 2, LoyaltyStarter 1, PietyStarter 1, StrategyChivalryGood 1
-army
-unit		Sea-ward Spearmen	    exp 1 armour 1 weapon_lvl 0
-
-character	Pelendur, admiral, male, age 32, x 243, y 192
-traits		Hero 1, Sailor 5, CheckAdmiral 1
-ancillaries da_flagship, naval_navigator
-army
-unit		Gondor Ship					exp 4 armour 0 weapon_lvl 0
-unit		Gondor Boat					exp 1 armour 0 weapon_lvl 0
-unit		Gondor Boat					exp 1 armour 0 weapon_lvl 0
-
-character	Baimeldir, admiral, male, age 26, x  264, y 158
-traits		Hero 1, Sailor 4, CheckAdmiral 1
-ancillaries shipwright
-army
-unit		Gondor Ship					exp 4 armour 0 weapon_lvl 0
-unit		Gondor Boat					exp 1 armour 0 weapon_lvl 0
-unit		Gondor Boat					exp 1 armour 0 weapon_lvl 0
-
-character	Beregond, diplomat, male, age 24, x 284, y 189, portrait Nick
-traits		DunedainRace 1, Amrothian 1, GoodDiplomat 5, NaturalDiplomatSkill 1, AgentPiety 1
-ancillaries	da_diplomat, swan_knight
 
 character_record	Angelimir, male, age 114, dead 3, past_leader
 character_record	Malrisel, female, age 113, dead 4, never_a_leader
@@ -2147,10 +2016,7 @@ character_record	Ivorwen, female, age 20, alive, never_a_leader
 character_record	Elphir, male, age 0, alive, never_a_leader
 
 relative		Angelimir, Malrisel, Adrahil, end
-relative		Adrahil, Laeriel, Ivriniel, Imrahil, Imlosdes, Ivorwen,end
-relative		Imrahil, Taesel, Elphir, end
-relative		Amandir, Imlosdes, end
-relative		Mistven, Ivorwen, end
+relative		Adrahil, Laeriel, Ivriniel, Imlosdes, Ivorwen,end
 
 ;##########################
 ;##### Faction: Rohan #####
@@ -6581,6 +6447,87 @@ ai_label default
 ;ai_label		slave_faction
 denari			0
 denari_kings_purse	0
+
+
+
+settlement castle
+{
+	level large_town
+	region Tolfalas_Province
+
+	year_founded 0
+	population 267
+	plan_set default_set
+	faction_creator scripts
+	building
+	{
+		type hinterland_green_book_08 green_book_Tolfalas
+	}
+	building
+	{
+		type core_castle_building castle
+	}
+	building
+	{
+		type castle_port c_port
+	}
+	building
+	{
+		type hinterland_farms farms
+	}
+	building
+	{
+		type temple_c_gondor_academic gondor_alchemists_lab
+	}
+}
+
+settlement
+{
+	level city
+	region Edhellond_Province
+
+	year_founded 0
+	population 355
+	plan_set default_set
+	faction_creator scripts
+
+	building
+	{
+		type hinterland_green_book_07 green_book_belfalas
+	}
+	building
+	{
+		type core_building stone_wall
+	}
+	building
+	{
+		type port dockyard
+	}
+	building
+	{
+		type city_hall town_hall
+	}	
+	building
+	{
+		type hinterland_farms farms
+	}
+	building
+	{
+		type market corn_exchange
+	}
+	building
+	{
+		type taverns brothel
+	}
+	building
+	{
+		type hinterland_roads roads
+	}
+	building
+	{
+		type temple_gondor_academic gondor_alchemists_lab
+	}
+}
 
 settlement castle
 {
