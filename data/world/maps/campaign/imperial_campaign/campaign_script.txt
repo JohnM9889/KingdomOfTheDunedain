@@ -141,7 +141,6 @@ script
 
     monitor_event PreFactionTurnStart FactionCultureType northern_european
         and DiplomaticStanceFromFaction sicily > Allied
-        and DiplomaticStanceFromFaction denmark > Allied
         set_event_counter ithil_allied 0
     end_monitor
 
@@ -161,20 +160,6 @@ script
     end_monitor
 
     monitor_event PreFactionTurnStart FactionIsLocal
-        if I_IsFactionAIControlled russia
-            if not I_IsFactionAIControlled denmark
-                console_command diplomatic_stance denmark russia war
-                console_command diplomatic_stance sicily russia war
-                console_command diplomatic_stance england russia allied
-                console_command diplomatic_stance spain russia allied
-            end_if
-            if not I_IsFactionAIControlled sicily
-                console_command diplomatic_stance denmark russia war
-                console_command diplomatic_stance sicily russia war
-                console_command diplomatic_stance england russia allied
-                console_command diplomatic_stance spain russia allied
-            end_if
-		end_if
         if I_IsFactionAIControlled gundabad			
             console_command diplomatic_stance gundabad poland allied
             console_command diplomatic_stance gundabad portugal allied
@@ -322,7 +307,6 @@ script
     ;######################### Events & Messages #########################
 
 	declare_counter faction_ID_sicily
-    declare_counter faction_ID_denmark
     declare_counter faction_ID_milan
     declare_counter faction_ID_normans
     declare_counter faction_ID_turks
@@ -353,7 +337,6 @@ script
 	monitor_event PreFactionTurnStart
         
         set_counter faction_ID_sicily 0	
-        set_counter faction_ID_denmark 0	
         set_counter faction_ID_milan 0	
         set_counter faction_ID_normans 0	
         set_counter faction_ID_turks 0	
@@ -382,7 +365,6 @@ script
         set_counter faction_ID_slave 0
 
         set_event_counter sicily_turn 0
-        set_event_counter denmark_turn 0
         set_event_counter milan_turn 0
         set_event_counter normans_turn 0
         set_event_counter turks_turn 0
@@ -415,12 +397,6 @@ script
         log always -----------------------------------Gondor Turn-------------------------------
         set_counter faction_ID_sicily 1								
         set_event_counter sicily_turn 1
-    end_monitor
-
-    monitor_event PreFactionTurnStart FactionType denmark ;Dol Amroth
-        log always -----------------------------------Dol Amroth Turn-------------------------------
-        set_counter faction_ID_denmark 1
-        set_event_counter denmark_turn 1
     end_monitor
 
     monitor_event PreFactionTurnStart FactionType milan ;Rohan
@@ -578,7 +554,6 @@ script
         set_counter faction_ID_slave 1
         set_event_counter slave_turn 1
         set_event_counter sicily_turn 1
-        set_event_counter denmark_turn 1
         set_event_counter milan_turn 1
         set_event_counter normans_turn 1
         set_event_counter turks_turn 1
@@ -612,9 +587,6 @@ script
 	monitor_event ButtonPressed ButtonPressed mission_button
         if I_CompareCounter faction_ID_sicily == 1
             historic_event faction_info_gondor
-        end_if
-        if I_CompareCounter faction_ID_denmark == 1
-            historic_event faction_info_da
         end_if
         if I_CompareCounter faction_ID_milan == 1
             historic_event faction_info_rohan
@@ -729,8 +701,6 @@ script
     declare_counter aztecs_sieged_capital
     declare_counter byzantium_lost_capital
     declare_counter byzantium_sieged_capital
-    declare_counter denmark_lost_capital
-    declare_counter denmark_sieged_capital
     declare_counter england_lost_blackgate
     declare_counter england_lost_capital
     declare_counter england_lost_minasmorgul
@@ -916,54 +886,6 @@ script
                 reveal_tile 441, 339
                 hide_all_revealed_tiles
                 set_counter byzantium_lost_capital 1
-            end_if
-        end_if
-        if I_IsFactionAIControlled denmark
-        and I_EventCounter reunited_kingdom = 0
-            if I_SettlementOwner Belfalas = denmark
-                if I_CompareCounter denmark_lost_capital = 1
-                    add_events
-                        event historic	amroth_capital_reclaim
-                        date		0
-                        position	243, 189
-                    end_add_events
-                    reveal_tile 243, 189
-                    hide_all_revealed_tiles
-                    set_counter denmark_lost_capital 0
-                end_if
-                if I_SettlementUnderSiege Belfalas
-                    and I_CompareCounter denmark_sieged_capital = 0
-                    add_events
-                        event historic	amroth_capital_siege
-                        date		0
-                        position	243, 189
-                    end_add_events
-                    reveal_tile 242, 188
-                    reveal_tile 242, 189
-                    reveal_tile 242, 190
-                    reveal_tile 243, 188
-                    reveal_tile 243, 189
-                    reveal_tile 243, 190
-                    reveal_tile 244, 188
-                    reveal_tile 244, 189
-                    reveal_tile 244, 190
-                    hide_all_revealed_tiles
-                    set_counter denmark_sieged_capital 1
-                end_if
-                if not I_SettlementUnderSiege Belfalas
-                    set_counter denmark_sieged_capital 0
-                end_if
-            end_if
-            if not I_SettlementOwner Belfalas = denmark
-                and I_CompareCounter denmark_lost_capital = 0
-                add_events
-                    event historic	amroth_capital_lost
-                    date		0
-                    position	243, 189
-                end_add_events
-                reveal_tile 243, 189
-                hide_all_revealed_tiles
-                set_counter denmark_lost_capital 1
             end_if
         end_if
         if I_IsFactionAIControlled saxons
@@ -2500,11 +2422,6 @@ script
         historic_event byzantium_king_event
     end_monitor
 
-    monitor_event BecomesFactionLeader FactionType denmark
-        and IsFactionAIControlled
-        historic_event denmark_king_event
-    end_monitor
-
     monitor_event BecomesFactionLeader FactionType france
         and IsFactionAIControlled
         historic_event france_king_event
@@ -2642,8 +2559,6 @@ script
     declare_counter aztecs_diminishes
     declare_counter byzantium_power
     declare_counter byzantium_diminishes
-    declare_counter denmark_power
-    declare_counter denmark_diminishes
     declare_counter england_power
     declare_counter england_diminishes
     declare_counter hre_power
@@ -2708,19 +2623,6 @@ script
             and I_CompareCounter byzantium_power = 0
             historic_event dorwinion_expand
             set_counter byzantium_power 1
-        end_if
-        ;end_if
-        ;if not I_LocalFaction denmark
-        if I_NumberOfSettlements denmark < 2
-            and I_CompareCounter denmark_diminishes = 0
-            and I_EventCounter reunited_kingdom = 0
-            historic_event amroth_diminish
-            set_counter denmark_diminishes 1
-        end_if
-        if I_NumberOfSettlements denmark >= 8
-            and I_CompareCounter denmark_power = 0
-            historic_event amroth_expand
-            set_counter denmark_power 1
         end_if
         ;end_if
         ;if not I_LocalFaction england
@@ -3141,10 +3043,6 @@ script
             increment_kings_purse byzantium 750
             add_money byzantium 3000
         end_if
-        if not I_IsFactionAIControlled denmark
-            increment_kings_purse denmark 750
-            add_money denmark 3000
-        end_if
         if not I_IsFactionAIControlled england
             increment_kings_purse england 750
             add_money england 3000
@@ -3252,10 +3150,6 @@ script
             increment_kings_purse byzantium 500
             add_money byzantium 1500
         end_if
-        if not I_IsFactionAIControlled denmark
-            increment_kings_purse denmark 500
-            add_money denmark 1500
-        end_if
         if not I_IsFactionAIControlled england
             increment_kings_purse england 500
             add_money england 1500
@@ -3360,9 +3254,6 @@ script
         end_if
         if not I_IsFactionAIControlled byzantium
             increment_kings_purse byzantium 250
-        end_if
-        if not I_IsFactionAIControlled denmark
-            increment_kings_purse denmark 250
         end_if
         if not I_IsFactionAIControlled england
             increment_kings_purse england 250
@@ -3545,109 +3436,6 @@ script
                 increment_kings_purse poland 1000
             end_if
         end_if
-        if not I_IsFactionAIControlled denmark
-            historic_event amroth_start factions { denmark, }
-            if I_IsFactionAIControlled england
-                spawn_army
-                    faction england
-                    character	random_name, named character, age 26, x 347, y 226, family, hero_ability WHIPING
-                    traits		OrcRace 1, HeroAbilityOrcWhiping 1, BattleChivalryEvil 2, Bloodthirsty 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Uruk Bodyguard					exp 5 armour 0 weapon_lvl 0
-                    unit		Black Uruk Halberds			exp 2 armour 0 weapon_lvl 0
-                    unit		Black Uruk Halberds			exp 2 armour 0 weapon_lvl 0
-                    unit		Orc Archers			exp 3 armour 0 weapon_lvl 0
-                    unit		Orc Archers			exp 3 armour 0 weapon_lvl 0
-                    unit		Black Uruks			exp 2 armour 0 weapon_lvl 0
-                    unit		Black Uruks			exp 2 armour 0 weapon_lvl 0
-                    unit		Black Uruks			exp 2 armour 0 weapon_lvl 0
-                    unit		Black Uruks			exp 2 armour 0 weapon_lvl 0
-                    unit		Orc Host			exp 0 armour 0 weapon_lvl 0
-                    unit		Orc Host			exp 0 armour 0 weapon_lvl 0
-                    unit		Orc Host			exp 0 armour 0 weapon_lvl 0
-                end				
-				spawn_army
-                    faction england
-                    character	random_name, named character, age 26, x 348, y 247, family, hero_ability WHIPING 
-                    traits		OrcRace 1, HeroAbilityOrcWhiping 1, BattleChivalryEvil 2, Bloodthirsty 1, GoodCommander 2, LoyaltyStarter 1, NightBattleCapable 1, PietyStarter 1
-                    unit		Uruk Bodyguard					exp 5 armour 0 weapon_lvl 0
-                    unit		Southron Warband			exp 3 armour 0 weapon_lvl 0
-                    unit		Southron Warband			exp 3 armour 0 weapon_lvl 0
-                    unit		Southron Warband			exp 3 armour 0 weapon_lvl 0
-					unit		Southron Warband			exp 3 armour 0 weapon_lvl 0
-                    unit		Southron Lancers			exp 2 armour 0 weapon_lvl 0
-                    unit		Southron Lancers			exp 2 armour 0 weapon_lvl 0
-                    unit		Loke-Gamp Rim			exp 3 armour 0 weapon_lvl 0
-                    unit		Loke-Gamp Rim			exp 3 armour 0 weapon_lvl 0
-                    unit		Loke-Innas Rim			exp 0 armour 0 weapon_lvl 0
-                    unit		Loke-Innas Rim			exp 0 armour 0 weapon_lvl 0
-                end
-            end_if
-            if I_IsFactionAIControlled spain
-                increment_kings_purse spain 1000
-                if I_SettlementOwner South_Mithlond = slave
-                    spawn_army
-                        faction spain
-                        character	random_name, named character, age 26, x 340, y 123, family, direction N, label harad_attackers_9
-                        traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, BattleChivalryEvil 2, LogisticalSkill 1, StrategyChivalryEvil 1, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                        unit		Black Snake Guard					exp 5 armour 0 weapon_lvl 0
-                        unit		Southron Lancers			exp 2 armour 0 weapon_lvl 0
-                        unit		Southron Lancers			exp 2 armour 0 weapon_lvl 0					
-                        unit		Southron Warband			exp 2 armour 0 weapon_lvl 0
-                        unit		Southron Warband			exp 2 armour 0 weapon_lvl 0					
-                    end
-                    console_command auto_win attacker
-                    siege_settlement harad_attackers_9, South_Mithlond, attack
-                end_if
-                if I_SettlementOwner Far_Harad = slave
-                    spawn_army
-                        faction spain
-                        character	random_name, named character, age 26, x 360, y 75, family, direction S, label harad_attackers_10
-                        traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAdministrator 1, GoodAttacker 1, GoodCommander 2, BattleChivalryEvil 2, LogisticalSkill 1, StrategyChivalryEvil 1, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                        unit		Black Snake Guard					exp 5 armour 0 weapon_lvl 0				
-                        unit		Haradrim Spearmen			exp 2 armour 0 weapon_lvl 0
-                        unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0					
-                    end
-                    console_command auto_win attacker
-                    siege_settlement harad_attackers_10, Far_Harad, attack	
-                end_if
-                if I_SettlementOwner Amon_Eithel = slave
-                    spawn_army
-                        faction spain
-                        character	random_name, named character, age 23, x 317, y 149, family, direction W, label harad_attackers_2
-                        traits		BadManRace 1, Haradrim 1, AIBoost 1, GoodAmbusher 2, GoodCommander 2, Just 1, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, TacticalSkill 1
-                        unit		Hasharii Shadows			exp 2 armour 1 weapon_lvl 0
-                        unit		Haradrim Spearmen			exp 2 armour 0 weapon_lvl 0
-                        unit		Haradrim Archers			exp 2 armour 0 weapon_lvl 0
-                    end
-                    console_command auto_win attacker
-                    siege_settlement harad_attackers_2, Amon_Eithel, attack	
-                end_if
-            end_if
-            if I_IsFactionAIControlled khand
-            and I_SettlementOwner Far_Desert = slave
-                spawn_army
-                    faction khand
-                    character	random_name, named character, age 31, x 473, y 105, family, direction S, label khand_attackers_3
-                    traits		BadManRace 1, VariagTribe 1, AIBoost 1, BattleChivalryEvil 1, GoodAttacker 2, GoodCavalryGeneral 1, GoodCommander 2, HarshRuler 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1, Energetic 1
-                    unit		Variag Nobles						exp 5 armour 1 weapon_lvl 0
-                    unit		Khandish Raiders			exp 1 armour 1 weapon_lvl 0
-                    unit		Khandish Raiders			exp 1 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0
-                    unit		Nomad Horsemen					exp 1 armour 1 weapon_lvl 0				
-                end
-                console_command auto_win attacker
-                siege_settlement khand_attackers_3, Far_Desert, attack	
-            end_if
-            if I_IsFactionAIControlled sicily
-                increment_kings_purse sicily -500
-            end_if
-            if I_IsFactionAIControlled russia
-                increment_kings_purse russia 2500
-                console_command create_unit Umbar "Rozadan Footmen" 2 1 0 0
-                console_command create_unit Umbar "Rozadan Halberdiers" 3 1 0 0
-                console_command create_unit Umbar "Rozadan Bowmen" 2 1 0 0
-            end_if
-        end_if
         if not I_IsFactionAIControlled england			
             historic_event mordor_start factions { england, }
             historic_event the_tribes factions { england, }
@@ -3695,9 +3483,6 @@ script
                     unit		Blackroot Vale Archers		exp 2 armour 1 weapon_lvl 0
                     unit		Blackroot Vale Archers		exp 2 armour 1 weapon_lvl 0				
                 end	
-            end_if
-            if I_IsFactionAIControlled denmark
-                increment_kings_purse denmark 1500		
             end_if
             if I_IsFactionAIControlled milan
                 increment_kings_purse milan 1000
@@ -4527,10 +4312,7 @@ script
                     console_command auto_win attacker
                     siege_settlement khand_attackers_G, South_Ithilien, attack
                 end_if
-            end_if			
-            if I_IsFactionAIControlled denmark
-                increment_kings_purse denmark -500	
-            end_if		
+            end_if	
             if I_EventCounter amon_hen_spawn = 0
                 console_command create_unit amon_hen_custom1 "Orc Scouts" 2 2 0 0
                 console_command create_unit amon_hen_custom1 "Raider Warband" 2 1 1 0
@@ -4543,24 +4325,6 @@ script
                 console_command create_unit Far_Harad "Mumakil"
             end_if
             historic_event harad_start factions { spain, }
-            if I_IsFactionAIControlled denmark
-                increment_kings_purse denmark 2000
-                if I_SettlementOwner Barad_Harn = slave
-                    spawn_army
-                        faction denmark
-                        character	random_name, named character, age 26, x 279, y 156, family, direction W, label DA_attackers_4
-                        traits		DunedainRace 1, Amrothian 1, AIBoost 1, Disciplinarian 1, GoodAttacker 1, GoodCommander 2, LogisticalSkill 1, Loyal 2, LoyaltyStarter 1, PietyStarter 1
-                        unit		Royal Swan-Guard     			exp 2 armour 1 weapon_lvl 0
-                        unit		Nimrodel Mariners			exp 1 armour 0 weapon_lvl 0
-                        unit		Amrothian Squires			exp 1 armour 0 weapon_lvl 0
-                        unit		Amrothian Squires			exp 1 armour 0 weapon_lvl 0					
-                        unit		Amrothian Guardsmen			exp 1 armour 0 weapon_lvl 0
-                        unit		Amrothian Guardsmen			exp 1 armour 0 weapon_lvl 0					
-                    end
-                    console_command auto_win attacker
-                    siege_settlement DA_attackers_4, Barad_Harn, attack
-                end_if
-            end_if
             if I_IsFactionAIControlled sicily
                 increment_kings_purse sicily 1000
             end_if
@@ -4831,9 +4595,6 @@ script
             increment_kings_purse gundabad 3000
             add_money gundabad, 1000	
 		end_if
-        if I_IsFactionAIControlled denmark
-            increment_kings_purse denmark 2200
-        end_if
 		if I_IsFactionAIControlled scotland
             increment_kings_purse scotland 300
         end_if
@@ -8429,7 +8190,6 @@ end_monitor
     
     monitor_event PreFactionTurnStart FactionType turks
         and DiplomaticStanceFromFaction sicily = Allied
-        and DiplomaticStanceFromFaction denmark = Allied
 		if I_IsFactionAIControlled turks
 			terminate_monitor
 		end_if
@@ -8445,10 +8205,6 @@ end_monitor
             and I_EventCounter osgiliath_east_rebuild = 0
                 console_command upgrade_settlement East_Osgiliath
             end_if
-            if I_SettlementOwner East_Osgiliath = denmark
-            and I_EventCounter osgiliath_east_rebuild = 0
-                console_command upgrade_settlement East_Osgiliath
-            end_if
             if I_SettlementOwner East_Osgiliath = russia
             and I_EventCounter osgiliath_east_rebuild = 0
                 console_command upgrade_settlement East_Osgiliath
@@ -8458,7 +8214,6 @@ end_monitor
                 banner united
 			end_set_faction_banner
             give_everything_to_faction sicily turks false
-            give_everything_to_faction denmark turks false
             increment_kings_purse turks 500
             add_money turks 12000
             console_command message_collation_set on
@@ -8745,12 +8500,6 @@ end_monitor
                 set_counter crypts_cardolan_owner_good 2
             end_if
         end_if
-        if I_SettlementOwner Cardolan = denmark
-            set_counter crypts_cardolan_owner_good 1
-            if not I_IsFactionAIControlled denmark
-                set_counter crypts_cardolan_owner_good 2
-            end_if
-        end_if
         if I_SettlementOwner Cardolan = milan
             set_counter crypts_cardolan_owner_good 1
             if not I_IsFactionAIControlled milan
@@ -8882,9 +8631,6 @@ end_monitor
                 if I_LocalFaction sicily
                     give_everything_to_faction scripts sicily false
                 end_if
-                if I_LocalFaction denmark
-                    give_everything_to_faction scripts denmark false
-                end_if
                 if I_LocalFaction milan
                     give_everything_to_faction scripts milan false
                 end_if
@@ -8978,9 +8724,6 @@ end_monitor
                 end
                 if I_SettlementOwner Cardolan = sicily
                     give_everything_to_faction scripts sicily false
-                end_if
-                if I_SettlementOwner Cardolan = denmark
-                    give_everything_to_faction scripts denmark false
                 end_if
                 if I_SettlementOwner Cardolan = milan
                     give_everything_to_faction scripts milan false
@@ -10432,7 +10175,6 @@ end_monitor
 		        console_command diplomatic_stance hungary khand Neutral
 		        console_command diplomatic_stance hungary sicily Neutral
 		        console_command diplomatic_stance hungary milan Neutral
-		        console_command diplomatic_stance hungary denmark Neutral
 		        console_command diplomatic_stance hungary scotland Neutral
 		        console_command diplomatic_stance hungary aztecs Neutral
 		        console_command diplomatic_stance hungary mongols Neutral
@@ -10502,7 +10244,6 @@ end_monitor
 		    console_command diplomatic_stance hungary khand Neutral
 		    console_command diplomatic_stance hungary sicily Neutral
 		    console_command diplomatic_stance hungary milan Neutral
-		    console_command diplomatic_stance hungary denmark Neutral
 		    console_command diplomatic_stance hungary scotland Neutral
 		    console_command diplomatic_stance hungary aztecs Neutral
 		    console_command diplomatic_stance hungary mongols Neutral
@@ -11772,7 +11513,6 @@ end_monitor
 		destroy_buildings khand temple_c_khand true
 		
 		console_command message_collation_set on
-		console_command diplomatic_stance denmark khand neutral
 		console_command diplomatic_stance sicily khand neutral
 		console_command diplomatic_stance khand venice war
 		console_command diplomatic_stance khand spain war
@@ -11824,7 +11564,6 @@ end_monitor
 		destroy_buildings khand temple_c_khand true		
 
 		console_command message_collation_set on
-		console_command diplomatic_stance denmark khand neutral
 		console_command diplomatic_stance sicily khand neutral
 		console_command diplomatic_stance khand venice war
 		console_command diplomatic_stance khand spain war
@@ -11876,7 +11615,6 @@ end_monitor
 		destroy_buildings khand temple_c_khand true
 
 		console_command message_collation_set on
-		console_command diplomatic_stance denmark khand neutral
 		console_command diplomatic_stance sicily khand neutral
 		console_command diplomatic_stance khand venice war
 		console_command diplomatic_stance khand spain war
@@ -11933,12 +11671,10 @@ end_monitor
 				console_command diplomatic_stance khand venice neutral
 				console_command diplomatic_stance khand spain neutral
 				console_command diplomatic_stance khand england neutral
-				console_command diplomatic_stance denmark khand neutral
 				console_command diplomatic_stance sicily khand neutral
 				console_command diplomatic_stance khand venice war
 				console_command diplomatic_stance khand spain war
 				console_command diplomatic_stance khand england war
-				console_command diplomatic_stance denmark khand allied
 				console_command diplomatic_stance sicily khand allied
 				console_command message_collation_set off
 				
@@ -12014,13 +11750,11 @@ end_monitor
 		console_command diplomatic_stance khand spain neutral
 		console_command diplomatic_stance khand england neutral
 		console_command diplomatic_stance khand russia neutral
-		console_command diplomatic_stance denmark khand neutral
 		console_command diplomatic_stance sicily khand neutral
 		console_command diplomatic_stance khand venice war
 		console_command diplomatic_stance khand spain war
 		console_command diplomatic_stance khand russia war
 		console_command diplomatic_stance khand england war
-		console_command diplomatic_stance denmark khand allied
 		console_command diplomatic_stance sicily khand allied
 		console_command message_collation_set off
 		
@@ -13130,7 +12864,7 @@ end_monitor
 			end_if
 			campaign_wait 0.1
             historic_event blue_wizards_attack_ai factions { england, france, poland, gundabad, russia, spain, venice, portugal, aztecs, hre, }
-            historic_event blue_wizards_perish factions { hungary, saxons, turks, normans, teutonic_order, milan, sicily, denmark, norway, timurids, ireland, mongols, moors, scotland, byzantium, }
+            historic_event blue_wizards_perish factions { hungary, saxons, turks, normans, teutonic_order, milan, sicily, norway, timurids, ireland, mongols, moors, scotland, byzantium, }
 		end_if
 		
 		
@@ -13178,7 +12912,7 @@ end_monitor
 				historic_event blue_wizards_attack_ai factions { england, france, poland, gundabad, russia, spain, venice, portugal, aztecs, hre, }
 			end_if
 			if I_EventCounter blue_wizards_perish = 0
-				historic_event blue_wizards_perish factions { hungary, saxons, turks, normans, teutonic_order, milan, sicily, denmark, norway, timurids, ireland, mongols, moors, scotland, byzantium, }
+				historic_event blue_wizards_perish factions { hungary, saxons, turks, normans, teutonic_order, milan, sicily, norway, timurids, ireland, mongols, moors, scotland, byzantium, }
 			end_if
 		end_if
 		
@@ -15197,27 +14931,6 @@ end_monitor
 		end_if
 		if I_CompareCounter game_very_hard = 1
 			add_money sicily 1501
-		end_if
-    end_monitor
-
-    monitor_event FactionTurnStart FactionType denmark
-        and Treasury <= -1
-        if not I_IsFactionAIControlled denmark
-            terminate_monitor
-        end_if
-        add_money denmark -2147483647
-        add_money denmark 2147483647
-        if I_CompareCounter game_easy = 1
-			add_money denmark 501
-		end_if
-		if I_CompareCounter game_medium = 1
-			add_money denmark 1001
-		end_if
-		if I_CompareCounter game_hard = 1
-			add_money denmark 1201
-		end_if
-		if I_CompareCounter game_very_hard = 1
-			add_money denmark 1501
 		end_if
     end_monitor
 
@@ -17653,7 +17366,6 @@ end_monitor
 	end_monitor
 
 	monitor_event TileSeen not IsFactionAIControlled
-	and not FactionType denmark
 	and not FactionType england
 	and not FactionType poland
 	and not FactionType sicily
@@ -17668,7 +17380,6 @@ end_monitor
 	end_monitor
 
 	monitor_event TileSeen not IsFactionAIControlled
-	and not FactionType denmark
 	and not FactionType england
 	and not FactionType poland
 	and not FactionType sicily
@@ -18320,7 +18031,7 @@ end_monitor
             and I_TurnNumber < 26
             and I_TurnNumber > 0
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_gathers factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_gathers factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             inc_counter wrc 1
         end_if
 
@@ -18335,7 +18046,7 @@ end_monitor
             and I_TurnNumber < 26
             and I_TurnNumber > 0
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_gathers factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_gathers factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             inc_counter wrc 1
         end_if
 
@@ -18350,7 +18061,7 @@ end_monitor
             and I_TurnNumber < 26
             and I_TurnNumber > 0
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_gathers factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_gathers factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             inc_counter wrc 1
         end_if
 
@@ -18365,7 +18076,7 @@ end_monitor
             and I_TurnNumber < 26
             and I_TurnNumber > 0
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_gathers factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_gathers factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             inc_counter wrc 1
         end_if
 
@@ -18380,7 +18091,7 @@ end_monitor
             and I_TurnNumber < 26
             and I_TurnNumber > 0
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_gathers factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_gathers factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             inc_counter wrc 1
         end_if
 
@@ -18392,7 +18103,7 @@ end_monitor
 
         if I_CompareCounter wrc >= 2
             and I_NumberOfSettlements venice > 0
-            historic_event rhun_horde factions { sicily, denmark, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
+            historic_event rhun_horde factions { sicily, milan, normans, turks, scotland, timurids, byzantium, moors, hungary, norway, saxons, mongols, ireland, teutonic_order, aztecs, france, england, poland, hre, portugal, gundabad, spain, khand, russia, } 
             spawn_army
                 faction venice
                 character	Ja_Sur, named character, age 35, x 468, y 296, family, direction W
@@ -19113,9 +18824,6 @@ end_monitor
         if I_LocalFaction sicily
             give_everything_to_faction scripts sicily false
         end_if
-        if I_LocalFaction denmark
-            give_everything_to_faction scripts denmark false
-        end_if
         if I_LocalFaction milan
             give_everything_to_faction scripts milan false
         end_if
@@ -19248,7 +18956,6 @@ end_monitor
         ; Good factions hate you for your decision
         console_command message_collation_set on
         set_faction_standing sicily teutonic_order -1
-        set_faction_standing denmark teutonic_order -1
         set_faction_standing milan teutonic_order -1
         set_faction_standing normans teutonic_order -1
         set_faction_standing turks teutonic_order -1
@@ -19566,7 +19273,6 @@ end_monitor
                 console_command diplomatic_stance england mongols war
                 console_command diplomatic_stance england moors war
                 console_command diplomatic_stance england norway war
-                console_command diplomatic_stance england denmark war
                 console_command diplomatic_stance england timurids war
                 console_command diplomatic_stance england normans war
                 console_command diplomatic_stance england hungary war
@@ -19754,9 +19460,6 @@ end_monitor
             if I_LocalFaction sicily
                 give_everything_to_faction scripts sicily false
             end_if
-            if I_LocalFaction denmark
-                give_everything_to_faction scripts denmark false
-            end_if
             if I_LocalFaction milan
                 give_everything_to_faction scripts milan false
             end_if
@@ -19848,9 +19551,6 @@ end_monitor
             end_if
             if I_LocalFaction norway
                 increment_kings_purse norway -500
-            end_if
-            if I_LocalFaction denmark
-                increment_kings_purse denmark -500
             end_if
             if I_LocalFaction byzantium
                 increment_kings_purse byzantium -500
@@ -20065,11 +19765,6 @@ end_monitor
                     set_faction_standing saxons norway 1
                     console_command diplomatic_stance norway saxons Allied
                 end_if
-                if I_LocalFaction denmark
-                    set_faction_standing denmark saxons 1
-                    set_faction_standing saxons denmark 1
-                    console_command diplomatic_stance denmark saxons Allied
-                end_if
                 if I_LocalFaction byzantium
                     set_faction_standing byzantium saxons 1
                     set_faction_standing saxons byzantium 1
@@ -20142,11 +19837,6 @@ end_monitor
                     set_faction_standing saxons norway 1
                     console_command diplomatic_stance norway saxons Allied
                 end_if
-                if I_LocalFaction denmark
-                    set_faction_standing denmark saxons 1
-                    set_faction_standing saxons denmark 1
-                    console_command diplomatic_stance denmark saxons Allied
-                end_if
                 if I_LocalFaction byzantium
                     set_faction_standing byzantium saxons 1
                     set_faction_standing saxons byzantium 1
@@ -20218,11 +19908,6 @@ end_monitor
                     set_faction_standing norway ireland 1
                     set_faction_standing ireland norway 1
                     console_command diplomatic_stance norway ireland Allied
-                end_if
-                if I_LocalFaction denmark
-                    set_faction_standing denmark ireland 1
-                    set_faction_standing ireland denmark 1
-                    console_command diplomatic_stance denmark ireland Allied
                 end_if
                 if I_LocalFaction byzantium
                     set_faction_standing byzantium ireland 1
@@ -20308,11 +19993,6 @@ end_monitor
                 set_religion normans catholic
                 create_mission ring_choice normans
                 set_religion normans wildmen
-            end_if
-            if I_LocalFaction denmark
-                set_religion denmark catholic
-                create_mission ring_choice denmark
-                set_religion denmark islam
             end_if
             if I_LocalFaction hungary
                 set_religion hungary catholic
@@ -20420,9 +20100,6 @@ end_monitor
             if I_LocalFaction norway
                 increment_kings_purse norway 500
             end_if
-            if I_LocalFaction denmark
-                increment_kings_purse denmark 500
-            end_if
             if I_LocalFaction byzantium
                 increment_kings_purse byzantium 500
             end_if
@@ -20509,11 +20186,6 @@ end_monitor
             set_religion normans catholic
             create_mission destroyOneRing normans
             set_religion normans wildmen
-        end_if
-        if I_LocalFaction denmark
-            set_religion denmark catholic
-            create_mission destroyOneRing denmark
-            set_religion denmark islam
         end_if
         if I_LocalFaction hungary
             set_religion hungary catholic
@@ -20703,14 +20375,6 @@ end_monitor
                     point_at_settlement Kings_Land
                     snap_strat_camera 249, 249
                     historic_event one_ring_edoras
-                end_if
-                if I_CompareCounter ring_timer != 0
-                    and I_SettlementOwner Belfalas = denmark
-                    and RandomPercent <= 7
-                    set_counter ring_timer 0
-                    snap_strat_camera 243, 190
-                    point_at_settlement Belfalas
-                    historic_event one_ring_dolamroth
                 end_if
                 if I_CompareCounter ring_timer != 0
                     and I_SettlementOwner Helms_Deep = milan
@@ -21215,7 +20879,6 @@ end_monitor
             console_command diplomatic_stance england mongols war
             console_command diplomatic_stance england moors war
             console_command diplomatic_stance england norway war
-            console_command diplomatic_stance england denmark war
             console_command diplomatic_stance england timurids war
             console_command diplomatic_stance england normans war
             console_command diplomatic_stance england hungary war
@@ -21413,7 +21076,6 @@ end_monitor
         set_faction_standing france sicily -1
         set_faction_standing france england -1
         set_faction_standing france portugal -1
-        set_faction_standing france denmark -1
         set_faction_standing france poland -1
 		set_faction_standing france papal_states -1
         set_faction_standing mongols france -1
@@ -21423,7 +21085,6 @@ end_monitor
         set_faction_standing sicily france -1
         set_faction_standing england france -1
         set_faction_standing portugal france -1
-        set_faction_standing denmark france -1
         set_faction_standing poland france -1
 		set_faction_standing papal_states france -1
         console_command diplomatic_stance france mongols war
@@ -21433,7 +21094,6 @@ end_monitor
         console_command diplomatic_stance france sicily war
         console_command diplomatic_stance france england war
         console_command diplomatic_stance france portugal war
-        console_command diplomatic_stance france denmark war
         console_command diplomatic_stance france poland war
 		console_command diplomatic_stance france papal_states war
         console_command message_collation_set off
@@ -22458,12 +22118,11 @@ end_monitor
     ;###################### Script: Pacify the Dead #####################
 ; when an enemy faction dies their diplomatic relationships get frozen and the surviving war participant can never ally with the dead faction's allies
 ; this script resets the relationships of dead factions to fix the issue
-; factions with "has_family_tree	no" are excluded because they continue to exist without any characters (cf. vanilla denmark & rebels)
+; factions with "has_family_tree	no" are excluded because they continue to exist without any characters (cf. vanilla  & rebels)
 ; not checking for I_NumberOfSettlements because that doesn't account for horde factions (idea from Withwnar)
 
 declare_counter faction_is_dead
 declare_counter sicily_dead
-declare_counter denmark_dead
 declare_counter milan_dead
 declare_counter normans_dead
 declare_counter turks_dead
@@ -22505,7 +22164,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance hre france neutral
 			console_command diplomatic_stance hre russia neutral
 			console_command diplomatic_stance hre ireland neutral
-			console_command diplomatic_stance hre denmark neutral
 			console_command diplomatic_stance hre norway neutral
 			console_command diplomatic_stance hre khand neutral
 			console_command diplomatic_stance hre gundabad neutral
@@ -22540,7 +22198,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance venice byzantium neutral
 			console_command diplomatic_stance venice france neutral
 			console_command diplomatic_stance venice russia neutral
-			console_command diplomatic_stance venice denmark neutral
 			console_command diplomatic_stance venice ireland neutral
 			console_command diplomatic_stance venice norway neutral
 			console_command diplomatic_stance venice khand neutral
@@ -22576,7 +22233,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance scotland byzantium neutral
 			console_command diplomatic_stance scotland france neutral
 			console_command diplomatic_stance scotland russia neutral
-			console_command diplomatic_stance scotland denmark neutral
 			console_command diplomatic_stance scotland ireland neutral
 			console_command diplomatic_stance scotland norway neutral
 			console_command diplomatic_stance scotland khand neutral
@@ -22612,7 +22268,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance spain byzantium neutral
 			console_command diplomatic_stance spain france neutral
 			console_command diplomatic_stance spain russia neutral
-			console_command diplomatic_stance spain denmark neutral
 			console_command diplomatic_stance spain ireland neutral
 			console_command diplomatic_stance spain norway neutral
 			console_command diplomatic_stance spain khand neutral
@@ -22648,7 +22303,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance byzantium spain neutral
 			console_command diplomatic_stance byzantium france neutral
 			console_command diplomatic_stance byzantium russia neutral
-			console_command diplomatic_stance byzantium denmark neutral
 			console_command diplomatic_stance byzantium ireland neutral
 			console_command diplomatic_stance byzantium norway neutral
 			console_command diplomatic_stance byzantium khand neutral
@@ -22684,7 +22338,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance france spain neutral
 			console_command diplomatic_stance france byzantium neutral
 			console_command diplomatic_stance france russia neutral
-			console_command diplomatic_stance france denmark neutral
 			console_command diplomatic_stance france ireland neutral
 			console_command diplomatic_stance france norway neutral
 			console_command diplomatic_stance france khand neutral
@@ -22720,7 +22373,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance russia spain neutral
 			console_command diplomatic_stance russia byzantium neutral
 			console_command diplomatic_stance russia france neutral
-			console_command diplomatic_stance russia denmark neutral
 			console_command diplomatic_stance russia ireland neutral
 			console_command diplomatic_stance russia norway neutral
 			console_command diplomatic_stance russia khand neutral
@@ -22743,42 +22395,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			set_counter russia_dead 1
 			log always DEBUG: +++ RIP RUSSIA +++
 	end_if
-	; denmark dead?
-	set_counter faction_is_dead 1
-	if I_FactionLeaderAttribute denmark Command < 999
-		set_counter faction_is_dead 0
-	end_if
-	if I_CompareCounter faction_is_dead == 1
-		and I_CompareCounter denmark_dead < 1
-			console_command diplomatic_stance denmark hre neutral
-			console_command diplomatic_stance denmark venice neutral
-			console_command diplomatic_stance denmark scotland neutral
-			console_command diplomatic_stance denmark spain neutral
-			console_command diplomatic_stance denmark byzantium neutral
-			console_command diplomatic_stance denmark france neutral
-			console_command diplomatic_stance denmark russia neutral
-			console_command diplomatic_stance denmark ireland neutral
-			console_command diplomatic_stance denmark norway neutral
-			console_command diplomatic_stance denmark khand neutral
-			console_command diplomatic_stance denmark gundabad neutral
-			console_command diplomatic_stance denmark teutonic_order neutral
-			console_command diplomatic_stance denmark milan neutral
-			console_command diplomatic_stance denmark aztecs neutral
-			console_command diplomatic_stance denmark papal_states neutral
-			console_command diplomatic_stance denmark saxons neutral
-			console_command diplomatic_stance denmark turks neutral
-			console_command diplomatic_stance denmark moors neutral
-			console_command diplomatic_stance denmark hungary neutral
-			console_command diplomatic_stance denmark portugal neutral
-			console_command diplomatic_stance denmark sicily neutral
-			console_command diplomatic_stance denmark timurids neutral
-			console_command diplomatic_stance denmark england neutral
-			console_command diplomatic_stance denmark mongols neutral
-			console_command diplomatic_stance denmark normans neutral
-			console_command diplomatic_stance denmark poland neutral
-			set_counter denmark_dead 1
-			log always DEBUG: +++ RIP denmark +++
-	end_if
 	; ireland dead?
 	set_counter faction_is_dead 1
 	if I_FactionLeaderAttribute ireland Command < 999
@@ -22793,7 +22409,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance ireland byzantium neutral
 			console_command diplomatic_stance ireland france neutral
 			console_command diplomatic_stance ireland russia neutral
-			console_command diplomatic_stance ireland denmark neutral
 			console_command diplomatic_stance ireland norway neutral
 			console_command diplomatic_stance ireland khand neutral
 			console_command diplomatic_stance ireland gundabad neutral
@@ -22829,7 +22444,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance norway byzantium neutral
 			console_command diplomatic_stance norway france neutral
 			console_command diplomatic_stance norway russia neutral
-			console_command diplomatic_stance norway denmark neutral
 			console_command diplomatic_stance norway ireland neutral
 			console_command diplomatic_stance norway khand neutral
 			console_command diplomatic_stance norway gundabad neutral
@@ -22865,7 +22479,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance khand byzantium neutral
 			console_command diplomatic_stance khand france neutral
 			console_command diplomatic_stance khand russia neutral
-			console_command diplomatic_stance khand denmark neutral
 			console_command diplomatic_stance khand ireland neutral
 			console_command diplomatic_stance khand norway neutral
 			console_command diplomatic_stance khand gundabad neutral
@@ -22901,7 +22514,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance gundabad byzantium neutral
 			console_command diplomatic_stance gundabad france neutral
 			console_command diplomatic_stance gundabad russia neutral
-			console_command diplomatic_stance gundabad denmark neutral
 			console_command diplomatic_stance gundabad ireland neutral
 			console_command diplomatic_stance gundabad norway neutral
 			console_command diplomatic_stance gundabad khand neutral
@@ -22937,7 +22549,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance teutonic_order byzantium neutral
 			console_command diplomatic_stance teutonic_order france neutral
 			console_command diplomatic_stance teutonic_order russia neutral
-			console_command diplomatic_stance teutonic_order denmark neutral
 			console_command diplomatic_stance teutonic_order ireland neutral
 			console_command diplomatic_stance teutonic_order norway neutral
 			console_command diplomatic_stance teutonic_order khand neutral
@@ -22973,7 +22584,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance milan byzantium neutral
 			console_command diplomatic_stance milan france neutral
 			console_command diplomatic_stance milan russia neutral
-			console_command diplomatic_stance milan denmark neutral
 			console_command diplomatic_stance milan ireland neutral
 			console_command diplomatic_stance milan norway neutral
 			console_command diplomatic_stance milan khand neutral
@@ -23009,7 +22619,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance aztecs byzantium neutral
 			console_command diplomatic_stance aztecs france neutral
 			console_command diplomatic_stance aztecs russia neutral
-			console_command diplomatic_stance aztecs denmark neutral
 			console_command diplomatic_stance aztecs ireland neutral
 			console_command diplomatic_stance aztecs norway neutral
 			console_command diplomatic_stance aztecs khand neutral
@@ -23045,7 +22654,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance saxons byzantium neutral
 			console_command diplomatic_stance saxons france neutral
 			console_command diplomatic_stance saxons russia neutral
-			console_command diplomatic_stance saxons denmark neutral
 			console_command diplomatic_stance saxons ireland neutral
 			console_command diplomatic_stance saxons norway neutral
 			console_command diplomatic_stance saxons khand neutral
@@ -23081,7 +22689,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance turks byzantium neutral
 			console_command diplomatic_stance turks france neutral
 			console_command diplomatic_stance turks russia neutral
-			console_command diplomatic_stance turks denmark neutral
 			console_command diplomatic_stance turks ireland neutral
 			console_command diplomatic_stance turks norway neutral
 			console_command diplomatic_stance turks khand neutral
@@ -23117,7 +22724,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance moors byzantium neutral
 			console_command diplomatic_stance moors france neutral
 			console_command diplomatic_stance moors russia neutral
-			console_command diplomatic_stance moors denmark neutral
 			console_command diplomatic_stance moors ireland neutral
 			console_command diplomatic_stance moors norway neutral
 			console_command diplomatic_stance moors khand neutral
@@ -23153,7 +22759,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance hungary byzantium neutral
 			console_command diplomatic_stance hungary france neutral
 			console_command diplomatic_stance hungary russia neutral
-			console_command diplomatic_stance hungary denmark neutral
 			console_command diplomatic_stance hungary ireland neutral
 			console_command diplomatic_stance hungary norway neutral
 			console_command diplomatic_stance hungary khand neutral
@@ -23189,7 +22794,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance portugal byzantium neutral
 			console_command diplomatic_stance portugal france neutral
 			console_command diplomatic_stance portugal russia neutral
-			console_command diplomatic_stance portugal denmark neutral
 			console_command diplomatic_stance portugal ireland neutral
 			console_command diplomatic_stance portugal norway neutral
 			console_command diplomatic_stance portugal khand neutral
@@ -23225,7 +22829,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance sicily byzantium neutral
 			console_command diplomatic_stance sicily france neutral
 			console_command diplomatic_stance sicily russia neutral
-			console_command diplomatic_stance sicily denmark neutral
 			console_command diplomatic_stance sicily ireland neutral
 			console_command diplomatic_stance sicily norway neutral
 			console_command diplomatic_stance sicily khand neutral
@@ -23261,7 +22864,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance timurids byzantium neutral
 			console_command diplomatic_stance timurids france neutral
 			console_command diplomatic_stance timurids russia neutral
-			console_command diplomatic_stance timurids denmark neutral
 			console_command diplomatic_stance timurids ireland neutral
 			console_command diplomatic_stance timurids norway neutral
 			console_command diplomatic_stance timurids khand neutral
@@ -23297,7 +22899,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance england byzantium neutral
 			console_command diplomatic_stance england france neutral
 			console_command diplomatic_stance england russia neutral
-			console_command diplomatic_stance england denmark neutral
 			console_command diplomatic_stance england ireland neutral
 			console_command diplomatic_stance england norway neutral
 			console_command diplomatic_stance england khand neutral
@@ -23333,7 +22934,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance mongols byzantium neutral
 			console_command diplomatic_stance mongols france neutral
 			console_command diplomatic_stance mongols russia neutral
-			console_command diplomatic_stance mongols denmark neutral
 			console_command diplomatic_stance mongols ireland neutral
 			console_command diplomatic_stance mongols norway neutral
 			console_command diplomatic_stance mongols khand neutral
@@ -23369,7 +22969,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance normans byzantium neutral
 			console_command diplomatic_stance normans france neutral
 			console_command diplomatic_stance normans russia neutral
-			console_command diplomatic_stance normans denmark neutral
 			console_command diplomatic_stance normans ireland neutral
 			console_command diplomatic_stance normans norway neutral
 			console_command diplomatic_stance normans khand neutral
@@ -23405,7 +23004,6 @@ monitor_event FactionTurnStart FactionIsLocal
 			console_command diplomatic_stance poland byzantium neutral
 			console_command diplomatic_stance poland france neutral
 			console_command diplomatic_stance poland russia neutral
-			console_command diplomatic_stance poland denmark neutral
 			console_command diplomatic_stance poland ireland neutral
 			console_command diplomatic_stance poland norway neutral
 			console_command diplomatic_stance poland khand neutral
@@ -41518,75 +41116,6 @@ end_monitor
     end_monitor
 
 
-    monitor_event GeneralAssaultsResidence IsTargetRegionOneOf Belfalas_Province
-        and I_SettlementUnderSiege Belfalas
-		
-		;Ai Additional
-        if I_SettlementOwner Belfalas = denmark
-        and I_IsFactionAIControlled denmark
-            console_command create_unit Belfalas "Gondor Garrison Elite" 3 3 1 1
-        end_if
-		
-        ;Tier 1
-        if I_CompareCounter core_Belfalas = 1
-            if I_CompareCounter garrison_culture = 0
-                console_command create_unit Belfalas "Northmen Garrison Elite" 2 0 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 1
-                console_command create_unit Belfalas "Dwarf Garrison" 2 0 0 0
-            end_if
-			if I_CompareCounter garrison_culture = 2
-                console_command create_unit Belfalas "Elf Garrison" 2 0 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 3
-                console_command create_unit Belfalas "Harad Garrison Elite" 2 0 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 4
-                console_command create_unit Belfalas "Orc Garrison Elite" 2 0 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 5
-                console_command create_unit Belfalas "Wildmen Garrison Elite" 2 0 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 6
-                console_command create_unit Belfalas "Gondor Garrison Elite" 2 4 0 0
-            end_if
-            if I_CompareCounter garrison_culture = 7
-                console_command create_unit Belfalas "Dunedain Garrison" 2 0 0 0
-            end_if
-        end_if
-		
-        ;Tier 2
-        if I_CompareCounter core_Belfalas = 2
-            if I_CompareCounter garrison_culture = 0
-                console_command create_unit Belfalas "Northmen Garrison Elite" 3 5 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 1
-                console_command create_unit Belfalas "Dwarf Garrison" 3 5 1 1
-            end_if
-			if I_CompareCounter garrison_culture = 2
-                console_command create_unit Belfalas "Elf Garrison" 3 5 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 3
-                console_command create_unit Belfalas "Harad Garrison Elite" 3 5 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 4
-                console_command create_unit Belfalas "Orc Garrison Elite" 3 5 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 5
-                console_command create_unit Belfalas "Wildmen Garrison Elite" 3 5 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 6
-                console_command create_unit Belfalas "Gondor Garrison Elite" 2 6 1 1
-            end_if
-            if I_CompareCounter garrison_culture = 7
-                console_command create_unit Belfalas "Dunedain Garrison" 3 5 1 1
-            end_if
-        end_if
-
-        set_counter garrison 1
-    end_monitor
-
-
     monitor_event GeneralAssaultsResidence IsTargetRegionOneOf Border_Province
         and I_SettlementUnderSiege Border
 		
@@ -53214,7 +52743,6 @@ end_monitor
         destroy_units milan garrison_unit
         destroy_units scotland garrison_unit
         destroy_units sicily garrison_unit
-        destroy_units denmark garrison_unit
         destroy_units byzantium garrison_unit
         destroy_units spain garrison_unit
         destroy_units venice garrison_unit
@@ -53245,7 +52773,6 @@ end_monitor
         destroy_units milan garrison_unit
         destroy_units scotland garrison_unit
         destroy_units sicily garrison_unit
-        destroy_units denmark garrison_unit
         destroy_units byzantium garrison_unit
         destroy_units spain garrison_unit
         destroy_units venice garrison_unit

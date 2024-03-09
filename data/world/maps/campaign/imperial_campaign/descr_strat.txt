@@ -6,7 +6,6 @@ campaign imperial_campaign
 
 playable
 	sicily
-	denmark
 	milan
 	normans
 	turks
@@ -1731,7 +1730,7 @@ settlement
 	year_founded 0
 	population 2818
 	plan_set default_set
-	faction_creator denmark
+	faction_creator sicily
 
 	building
 	{
@@ -1768,6 +1767,61 @@ settlement
 	building
 	{
 		type temple_gondor_academic gondor_alchemists_lab
+	}
+}
+
+settlement castle
+{
+	level city
+	region Belfalas_Province
+
+	year_founded 0
+	population 4935
+	plan_set default_set
+	faction_creator teutonic_order
+	building
+	{
+		type hinterland_green_book_07 green_book_belfalas
+	}
+	building
+	{
+		type core_castle_building fortress
+	}
+	building
+	{
+		type hinterland_unique2 tirith_aear
+	}
+	building
+	{
+		type castle_hall c_town_hall
+	}
+	building
+	{
+		type castle_barracks garrison_quarters
+	}
+	building
+	{
+		type c_equestrian c_stables
+	}
+	building
+	{
+		type c_missiles c_practice_range
+	}
+	building
+	{
+		type castle_port c_naval_drydock
+	}
+	building
+	{
+		type temple_c_gondor_academic gondor_alchemists_lab
+	}
+	building
+	{
+		type hinterland_farms farms
+	}
+	building
+	{
+		type hinterland_roads paved_roads
 	}
 }
 
@@ -1933,90 +1987,6 @@ relative		Golasgil, Malfinsel, Hanon, end
 
 ; Hirluin's Line
 relative		Hirluin, Mithel, Brandir, end
-
-;###############################
-;##### Faction: Dol Amroth #####
-;###############################
-
-faction	denmark, sailor richard
-ai_label dunedain
-denari			18000
-denari_kings_purse	1000
-
-settlement castle
-{
-	level city
-	region Belfalas_Province
-
-	year_founded 0
-	population 4935
-	plan_set default_set
-	faction_creator teutonic_order
-	building
-	{
-		type hinterland_green_book_07 green_book_belfalas
-	}
-	building
-	{
-		type core_castle_building fortress
-	}
-	building
-	{
-		type hinterland_unique2 tirith_aear
-	}
-	building
-	{
-		type castle_hall c_town_hall
-	}
-	building
-	{
-		type castle_barracks garrison_quarters
-	}
-	building
-	{
-		type c_equestrian c_stables
-	}
-	building
-	{
-		type c_missiles c_practice_range
-	}
-	building
-	{
-		type castle_port c_naval_drydock
-	}
-	building
-	{
-		type temple_c_gondor_academic gondor_alchemists_lab
-	}
-	building
-	{
-		type hinterland_farms farms
-	}
-	building
-	{
-		type hinterland_roads paved_roads
-	}
-}
-
-character	Adrahil, named character, male, leader, age 63, x 243, y 189, portrait Adrahil, hero_ability IRON_FIST, label adrahil_1
-traits		Adrahil 1, Hero 1, DunedainRace 1, Amrothian 1, FactionLeader 1, HeroAbilityIronFist 1, BattleChivalryGood 1, GoodCommander 2, GoodDefender 1, Just 1, KindRuler 1, PietyStarter 1, StrategyChivalryGood 3, NaturalMilitarySkill 1
-ancillaries	prince_dol_amroth, veteran_officer, da_shield
-army
-unit		Talon Knights				    exp 4 armour 0 weapon_lvl 1
-unit		Amrothian Guardsmen				exp 1 armour 2 weapon_lvl 0
-unit		Amrothian Guardsmen				exp 1 armour 2 weapon_lvl 0
-
-character_record	Angelimir, male, age 114, dead 3, past_leader
-character_record	Malrisel, female, age 113, dead 4, never_a_leader
-character_record	Laeriel, female, age 63, alive, never_a_leader
-character_record	Ivriniel, female, age 33, alive, never_a_leader
-character_record	Taesel, female, age 23, alive, never_a_leader
-character_record	Imlosdes, female, age 22, alive, never_a_leader
-character_record	Ivorwen, female, age 20, alive, never_a_leader
-character_record	Elphir, male, age 0, alive, never_a_leader
-
-relative		Angelimir, Malrisel, Adrahil, end
-relative		Adrahil, Laeriel, Ivriniel, Imlosdes, Ivorwen,end
 
 ;##########################
 ;##### Faction: Rohan #####
@@ -10374,13 +10344,6 @@ unit		Azrazair Archers			exp 0 armour 0 weapon_lvl 0
 unit		Azrazair Raiders			exp 0 armour 2 weapon_lvl 1
 unit		Azrazair Raiders			exp 0 armour 2 weapon_lvl 1
 
-character	sub_faction denmark, Finglin, general, male, age 23, x 247, y 181
-army
-unit		Azrazair Marines			exp 1 armour 0 weapon_lvl 0
-unit		Azrazair Crossbowmen				exp 0 armour 0 weapon_lvl 0
-unit		Azrazair Crossbowmen				exp 0 armour 0 weapon_lvl 0
-unit		Azrazair Archers			exp 0 armour 0 weapon_lvl 0
-
 character	sub_faction sicily, Timbrethil, general, male, age 25, x 330, y 179
 army
 unit		Khandish Raiders		exp 2 armour 0 weapon_lvl 0
@@ -10667,7 +10630,6 @@ unit		Ent Catapult				exp 9 armour 0 weapon_lvl 0
 ;##### Diplomacy - Standings #####
 ;#################################
 
-faction_standings	sicily,	1.00	denmark
 faction_standings	sicily,	1.00	turks
 faction_standings	sicily,	1.00	milan
 faction_standings	sicily,	0.60	timurids
@@ -10694,35 +10656,7 @@ faction_standings	sicily,	-0.90	poland
 faction_standings	sicily,	-0.90	england
 faction_standings	sicily,	-0.90	papal_states
 faction_standings	sicily,	-1.00	slave
-faction_standings	denmark,	1.00	sicily
-faction_standings	denmark,	1.00	turks
-faction_standings	denmark,	1.00	milan
-faction_standings	denmark,	0.50	timurids
-faction_standings	denmark,	0.40	scotland
-faction_standings	denmark,	0.40	byzantium
-faction_standings	denmark,	0.40	normans
-faction_standings	denmark,	0.80	saxons
-faction_standings	denmark,	0.80	ireland
-faction_standings	denmark,	0.10	mongols
-faction_standings	denmark,	0.10	moors
-faction_standings	denmark,	0.10	norway
-faction_standings	denmark,	0.10	hungary
-faction_standings	denmark,	0.00	teutonic_order
-faction_standings	denmark,	-0.50	aztecs
-faction_standings	denmark,	-0.90	russia
-faction_standings	denmark,	-0.20	khand
-faction_standings	denmark,	-0.80	venice
-faction_standings	denmark,	-0.80	spain
-faction_standings	denmark,	-0.90	portugal
-faction_standings	denmark,	-0.90	france
-faction_standings	denmark,	-0.90	hre
-faction_standings	denmark,	-0.90	gundabad
-faction_standings	denmark,	-0.90	poland
-faction_standings	denmark,	-0.90	england
-faction_standings	denmark,	-0.90	papal_states
-faction_standings	denmark,	-1.00	slave
 faction_standings	turks,	1.00	sicily
-faction_standings	turks,	1.00	denmark
 faction_standings	turks,	0.90	milan
 faction_standings	turks,	0.80	timurids
 faction_standings	turks,	0.60	scotland
@@ -10749,7 +10683,6 @@ faction_standings	turks,	-0.90	england
 faction_standings	turks,	-0.90	papal_states
 faction_standings	turks,	-1.00	slave
 faction_standings	milan,	1.00	sicily
-faction_standings	milan,	1.00	denmark
 faction_standings	milan,	0.90	turks
 faction_standings	milan,	0.80	timurids
 faction_standings	milan,	0.50	scotland
@@ -10776,7 +10709,6 @@ faction_standings	milan,	-0.90	england
 faction_standings	milan,	-0.90	papal_states
 faction_standings	milan,	-1.00	slave
 faction_standings	timurids,	0.50	sicily
-faction_standings	timurids,	0.50	denmark
 faction_standings	timurids,	0.70	turks
 faction_standings	timurids,	0.80	milan
 faction_standings	timurids,	0.80	scotland
@@ -10803,7 +10735,6 @@ faction_standings	timurids,	-0.90	england
 faction_standings	timurids,	-0.90	papal_states
 faction_standings	timurids,	-1.00	slave
 faction_standings	scotland,	0.40	sicily
-faction_standings	scotland,	0.40	denmark
 faction_standings	scotland,	0.40	turks
 faction_standings	scotland,	0.40	milan
 faction_standings	scotland,	0.80	timurids
@@ -10830,7 +10761,6 @@ faction_standings	scotland,	-0.90	england
 faction_standings	scotland,	-0.90	papal_states
 faction_standings	scotland,	-1.00	slave
 faction_standings	byzantium,	0.20	sicily
-faction_standings	byzantium,	0.20	denmark
 faction_standings	byzantium,	0.20	turks
 faction_standings	byzantium,	0.20	milan
 faction_standings	byzantium,	0.30	timurids
@@ -10857,7 +10787,6 @@ faction_standings	byzantium,	-0.90	england
 faction_standings	byzantium,	-0.90	papal_states
 faction_standings	byzantium,	-1.00	slave
 faction_standings	normans,	0.10	sicily
-faction_standings	normans,	0.10	denmark
 faction_standings	normans,	1.00	turks
 faction_standings	normans,	0.40	milan
 faction_standings	normans,	0.60	timurids
@@ -10884,7 +10813,6 @@ faction_standings	normans,	-0.90	england
 faction_standings	normans,	-0.90	papal_states
 faction_standings	normans,	-1.00	slave
 faction_standings	saxons,	0.70	sicily
-faction_standings	saxons,	0.70	denmark
 faction_standings	saxons,	1.00	turks
 faction_standings	saxons,	0.60	milan
 faction_standings	saxons,	0.80	timurids
@@ -10911,7 +10839,6 @@ faction_standings	saxons,	-0.90	england
 faction_standings	saxons,	-0.90	papal_states
 faction_standings	saxons,	-1.00	slave
 faction_standings	ireland,	0.80	sicily
-faction_standings	ireland,	0.80	denmark
 faction_standings	ireland,	1.00	turks
 faction_standings	ireland,	1.00	milan
 faction_standings	ireland,	1.00	timurids
@@ -10938,7 +10865,6 @@ faction_standings	ireland,	-0.90	england
 faction_standings	ireland,	-0.90	papal_states
 faction_standings	ireland,	-1.00	slave
 faction_standings	mongols,	0.50	sicily
-faction_standings	mongols,	0.50	denmark
 faction_standings	mongols,	0.80	turks
 faction_standings	mongols,	0.50	milan
 faction_standings	mongols,	0.80	timurids
@@ -10965,7 +10891,6 @@ faction_standings	mongols,	-0.90	england
 faction_standings	mongols,	-0.90	papal_states
 faction_standings	mongols,	-1.00	slave
 faction_standings	moors,	0.20	sicily
-faction_standings	moors,	0.20	denmark
 faction_standings	moors,	0.80	turks
 faction_standings	moors,	0.20	milan
 faction_standings	moors,	0.80	timurids
@@ -10992,7 +10917,6 @@ faction_standings	moors,	-0.90	england
 faction_standings	moors,	-0.90	papal_states
 faction_standings	moors,	-1.00	slave
 faction_standings	norway,	0.20	sicily
-faction_standings	norway,	0.20	denmark
 faction_standings	norway,	0.80	turks
 faction_standings	norway,	0.20	milan
 faction_standings	norway,	0.80	timurids
@@ -11019,7 +10943,6 @@ faction_standings	norway,	-0.90	england
 faction_standings	norway,	-0.90	papal_states
 faction_standings	norway,	-1.00	slave
 faction_standings	hungary,	0.10	sicily
-faction_standings	hungary,	0.10	denmark
 faction_standings	hungary,	0.50	turks
 faction_standings	hungary,	0.10	milan
 faction_standings	hungary,	0.40	timurids
@@ -11046,7 +10969,6 @@ faction_standings	hungary,	-0.90	england
 faction_standings	hungary,	-0.90	papal_states
 faction_standings	hungary,	-1.00	slave
 faction_standings	teutonic_order,	0.00	sicily
-faction_standings	teutonic_order,	0.00	denmark
 faction_standings	teutonic_order,	0.00	turks
 faction_standings	teutonic_order,	0.00	milan
 faction_standings	teutonic_order,	0.00	timurids
@@ -11073,7 +10995,6 @@ faction_standings	teutonic_order,	-0.10	england
 faction_standings	teutonic_order,	-0.10	papal_states
 faction_standings	teutonic_order,	-1.00	slave
 faction_standings	aztecs,	-0.60	sicily
-faction_standings	aztecs,	-0.60	denmark
 faction_standings	aztecs,	-0.60	turks
 faction_standings	aztecs,	-0.90	milan
 faction_standings	aztecs,	-0.80	timurids
@@ -11100,7 +11021,6 @@ faction_standings	aztecs,	0.00	england
 faction_standings	aztecs,	0.00	papal_states
 faction_standings	aztecs,	-1.00	slave
 faction_standings	russia,	-0.90	sicily
-faction_standings	russia,	-0.90	denmark
 faction_standings	russia,	-0.90	turks
 faction_standings	russia,	-0.70	milan
 faction_standings	russia,	-0.50	timurids
@@ -11127,7 +11047,6 @@ faction_standings	russia,	-0.90	england
 faction_standings	russia,	-0.90	papal_states
 faction_standings	russia,	-1.00	slave
 faction_standings	khand,	-0.60	sicily
-faction_standings	khand,	-0.60	denmark
 faction_standings	khand,	-0.60	turks
 faction_standings	khand,	-0.60	milan
 faction_standings	khand,	0.00	timurids
@@ -11154,7 +11073,6 @@ faction_standings	khand,	0.80	england
 faction_standings	khand,	0.80	papal_states
 faction_standings	khand,	-1.00	slave
 faction_standings	venice,	-0.90	sicily
-faction_standings	venice,	-0.90	denmark
 faction_standings	venice,	-0.90	turks
 faction_standings	venice,	-0.90	milan
 faction_standings	venice,	-0.50	timurids
@@ -11181,7 +11099,6 @@ faction_standings	venice,	0.90	england
 faction_standings	venice,	0.90	papal_states
 faction_standings	venice,	-1.00	slave
 faction_standings	spain,	-0.90	sicily
-faction_standings	spain,	-0.90	denmark
 faction_standings	spain,	-0.90	turks
 faction_standings	spain,	-0.90	milan
 faction_standings	spain,	-0.20	timurids
@@ -11208,7 +11125,6 @@ faction_standings	spain,	0.80	england
 faction_standings	spain,	0.80	papal_states
 faction_standings	spain,	-1.00	slave
 faction_standings	portugal,	-0.90	sicily
-faction_standings	portugal,	-0.90	denmark
 faction_standings	portugal,	-0.90	turks
 faction_standings	portugal,	-0.80	milan
 faction_standings	portugal,	-0.80	timurids
@@ -11235,7 +11151,6 @@ faction_standings	portugal,	1.00	england
 faction_standings	portugal,	1.00	papal_states
 faction_standings	portugal,	-1.00	slave
 faction_standings	france,	-0.90	sicily
-faction_standings	france,	-0.90	denmark
 faction_standings	france,	-0.90	turks
 faction_standings	france,	-0.80	milan
 faction_standings	france,	-0.80	timurids
@@ -11262,7 +11177,6 @@ faction_standings	france,	0.30	england
 faction_standings	france,	0.30	papal_states
 faction_standings	france,	-1.00	slave
 faction_standings	hre,	-0.90	sicily
-faction_standings	hre,	-0.90	denmark
 faction_standings	hre,	-0.90	turks
 faction_standings	hre,	-0.90	milan
 faction_standings	hre,	-0.90	timurids
@@ -11289,7 +11203,6 @@ faction_standings	hre,	0.80	england
 faction_standings	hre,	0.80	papal_states
 faction_standings	hre,	-1.00	slave
 faction_standings	gundabad,	-0.90	sicily
-faction_standings	gundabad,	-0.90	denmark
 faction_standings	gundabad,	-0.90	turks
 faction_standings	gundabad,	-0.90	milan
 faction_standings	gundabad,	-0.90	timurids
@@ -11316,7 +11229,6 @@ faction_standings	gundabad,	0.30	england
 faction_standings	gundabad,	0.30	papal_states
 faction_standings	gundabad,	-1.00	slave
 faction_standings	poland,	-0.90	sicily
-faction_standings	poland,	-0.90	denmark
 faction_standings	poland,	-0.90	turks
 faction_standings	poland,	-0.90	milan
 faction_standings	poland,	-0.90	timurids
@@ -11343,7 +11255,6 @@ faction_standings	poland,	1.00	england
 faction_standings	poland,	1.00	papal_states
 faction_standings	poland,	-1.00	slave
 faction_standings	england,	-0.90	sicily
-faction_standings	england,	-0.90	denmark
 faction_standings	england,	-0.90	turks
 faction_standings	england,	-0.90	milan
 faction_standings	england,	-0.90	timurids
@@ -11370,7 +11281,6 @@ faction_standings	england,	1.00	poland
 faction_standings	england,	1.00	papal_states
 faction_standings	england,	-1.00	slave
 faction_standings	papal_states,	-0.90	sicily
-faction_standings	papal_states,	-0.90	denmark
 faction_standings	papal_states,	-0.90	turks
 faction_standings	papal_states,	-0.90	milan
 faction_standings	papal_states,	-0.90	timurids
@@ -11397,7 +11307,6 @@ faction_standings	papal_states,	1.00	poland
 faction_standings	papal_states,	1.00	england
 faction_standings	papal_states,	-1.00	slave
 faction_standings	slave,	-1.00	sicily
-faction_standings	slave,	-1.00	denmark
 faction_standings	slave,	-1.00	turks
 faction_standings	slave,	-1.00	milan
 faction_standings	slave,	-1.00	timurids
@@ -11430,19 +11339,16 @@ faction_standings	slave,	-1.00	papal_states
 
 faction_relationships 	sicily,		at_war_with 		england, spain, khand, slave
 faction_relationships	sicily,		allied_to		milan
-faction_relationships 	denmark,	at_war_with 		england, spain, slave
-faction_relationships	denmark,	allied_to		milan
-faction_relationships	denmark,	protectorate_of		sicily
 faction_relationships 	milan,		at_war_with 		aztecs, slave
-faction_relationships	milan,		allied_to		denmark, sicily, ireland
-faction_relationships 	england,	at_war_with 		denmark, sicily, slave
+faction_relationships	milan,		allied_to		sicily, ireland
+faction_relationships 	england,	at_war_with 		sicily, slave
 faction_relationships 	poland,		at_war_with 		mongols, ireland, norway, timurids, slave
 faction_relationships	poland,		protectorate_of		england
 faction_relationships 	france,		at_war_with 		slave
 faction_relationships	france,		allied_to		aztecs
 faction_relationships 	aztecs,		at_war_with 		milan, normans, slave
 faction_relationships	aztecs,		protectorate_of		france
-faction_relationships 	spain,		at_war_with		denmark, sicily, slave
+faction_relationships 	spain,		at_war_with		sicily, slave
 faction_relationships	spain,		allied_to		khand
 faction_relationships	spain,		protectorate_of		england
 faction_relationships 	russia,		at_war_with 		slave
@@ -11485,7 +11391,7 @@ faction_relationships	khand, allied_to			spain, venice
 faction_relationships	khand, protectorate_of		england
 faction_relationships	papal_states, allied_to	england, poland
 faction_relationships	poland, allied_to			papal_states
-faction_relationships 	slave, at_war_with 			teutonic_order, aztecs, hre, poland, portugal, france, papal_states, england, khand, venice, spain, russia, scotland, turks, timurids, byzantium, denmark, ireland, normans, milan, saxons, sicily, mongols, norway, moors, hungary, gundabad
+faction_relationships 	slave, at_war_with 			teutonic_order, aztecs, hre, poland, portugal, france, papal_states, england, khand, venice, spain, russia, scotland, turks, timurids, byzantium, ireland, normans, milan, saxons, sicily, mongols, norway, moors, hungary, gundabad
 
 ;#################################
 ;##### Watchtowers & Forts #######
