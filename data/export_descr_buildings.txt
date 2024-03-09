@@ -454,7 +454,6 @@ building equestrian
 
 				recruit_pool "Dale Cavalry"  1   0.1   2  0  requires factions { scotland, }  and region_religion northmen 25
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
 
@@ -525,7 +524,6 @@ building equestrian
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Cavalry Militia"   1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { sicily, }  and region_religion islam 50
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
@@ -587,7 +585,6 @@ building equestrian
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Cavalry Militia"   1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { sicily, }  and region_religion islam 50
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
@@ -658,7 +655,6 @@ building c_equestrian
 
 				recruit_pool "Dale Cavalry"  1   0.112   2  0  requires factions { scotland, }  and region_religion northmen 25
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
 
@@ -732,7 +728,6 @@ building c_equestrian
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Cavalry Militia"   1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 50
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
@@ -799,7 +794,6 @@ building c_equestrian
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Earls"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Cavalry Militia"   1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 50
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK
@@ -1982,7 +1976,6 @@ building barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -2111,7 +2104,6 @@ building barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -2294,7 +2286,6 @@ building barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -2515,7 +2506,6 @@ building barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -2738,7 +2728,6 @@ building barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -2929,7 +2918,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -3058,7 +3046,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095  2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -3231,7 +3218,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -3440,7 +3426,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -3660,7 +3645,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -3897,7 +3881,6 @@ building castle_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { sicily, denmark, }  and region_religion islam 25
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 20
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource Enedwaith and hidden_resource ResA
@@ -4058,7 +4041,6 @@ building missiles
 				recruit_pool "Athala Rangers"  1   0.07   1  0  requires factions { scotland, }  and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Athala Rangers"  1   0.07   1  0  requires factions { scotland, }  and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Amrothian Archers"  1   0.1   2  0  requires factions { denmark, }  and region_religion islam 30
 				recruit_pool "Blackroot Vale Archers"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
@@ -4122,7 +4104,6 @@ building missiles
 				recruit_pool "Hearthguard"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Hearthguard"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Blackroot Vale Archers"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { sicily, }  and region_religion islam 50
@@ -4215,7 +4196,6 @@ building missiles
 				recruit_pool "Hearthguard"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Hearthguard"  1   0.07   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Blackroot Vale Archers"  1   0.09   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { sicily, }  and region_religion islam 50
@@ -4300,7 +4280,6 @@ building c_missiles
 				recruit_pool "Athala Rangers"  1   0.075   1  0  requires factions { scotland, }  and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Athala Rangers"  1   0.075   1  0  requires factions { scotland, }  and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Amrothian Archers"  1   0.112   2  0  requires factions { denmark, }  and region_religion islam 30
 				recruit_pool "Blackroot Vale Archers"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
@@ -4363,7 +4342,6 @@ building c_missiles
 				recruit_pool "Hearthguard"  1   0.075   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Hearthguard"  1   0.075   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Blackroot Vale Archers"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { sicily, }  and region_religion islam 50
@@ -4455,7 +4433,6 @@ building c_missiles
 				recruit_pool "Hearthguard"  1   0.075   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResC
 				recruit_pool "Hearthguard"  1   0.075   1  0  requires factions { scotland, }  and region_religion northmen 75 and hidden_resource Logathavuld and hidden_resource ResD
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { sicily, }  and region_religion islam 25
 				recruit_pool "Blackroot Vale Archers"  1   0.095   2  0  requires factions { sicily, denmark, }  and region_religion islam 25 and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { sicily, denmark, }  and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { sicily, }  and region_religion islam 50
@@ -7008,7 +6985,6 @@ building guild_horse_breeders_guild
 				recruit_pool "Serpent Guard" 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Serpent Archers" 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Muhad Beastmasters" 				 0  0.025   0.5  	 0  requires factions { spain, }
-				recruit_pool "Gondor Cavalry Militia" 		 	 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Amrothian Squires"  				 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Sea-ward Lancers"  				 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Nomad Horsemen" 					 0  0.025   0.5	 0  requires factions { khand, }
@@ -7049,7 +7025,6 @@ building guild_horse_breeders_guild
 				recruit_pool "Camel Riders" 		 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Serpent Guard" 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Serpent Archers" 			 0  0.025   0.5  	 0  requires factions { spain, }
-				recruit_pool "Gondor Cavalry Militia" 		 	 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Amrothian Squires"  				 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Nomad Horsemen" 					 0  0.025   0.5	 0  requires factions { khand, }
 				recruit_pool "Khandish Raiders" 				 0  0.025   0.5	 0  requires factions { khand, }
@@ -7097,7 +7072,6 @@ building guild_horse_breeders_guild
 				recruit_pool "Camel Riders" 		 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Serpent Guard" 			 0  0.025   0.5  	 0  requires factions { spain, }
 				recruit_pool "Serpent Archers" 			 0  0.025   0.5  	 0  requires factions { spain, }
-				recruit_pool "Gondor Cavalry Militia" 		 	 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Amrothian Squires"  				 0  0.025   0.5 	 0  requires factions { denmark, }
 				recruit_pool "Nomad Horsemen" 					 0  0.025   0.5	 0  requires factions { khand, }
 				recruit_pool "Khandish Raiders" 				 0  0.025   0.5	 0  requires factions { khand, }
@@ -11191,12 +11165,6 @@ building umbar_control_camp
 
 				recruit_pool "Territorial Guardsmen"  1   0.06   2  0  requires factions { russia, } and hidden_resource GondorEast
 				recruit_pool "Territorial Guardsmen"  1   0.06   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Militia"  1   0.06   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.06   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Archer Militia"  1   0.06   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.06   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Cavalry Militia"  1   0.06   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.06   2  0  requires factions { russia, }  and hidden_resource GondorWest
 				recruit_pool "Lebennin Marines"  1   0.04   2  0  requires factions { russia, }  and region_religion kings 40 and hidden_resource GondorEast and hidden_resource ResJ
 				recruit_pool "Lebennin Marines"  1   0.04   2  0  requires factions { russia, }  and region_religion kings 40 and hidden_resource GondorWest and hidden_resource ResH
 
@@ -11315,12 +11283,6 @@ building umbar_control_camp
 
 				recruit_pool "Territorial Guardsmen"  1   0.07   2  0  requires factions { russia, } and hidden_resource GondorEast
 				recruit_pool "Territorial Guardsmen"  1   0.07   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Militia"  1   0.07   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.07   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Archer Militia"  1   0.07   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.07   2  0  requires factions { russia, }  and hidden_resource GondorWest
-				recruit_pool "Gondor Cavalry Militia"  1   0.07   2  0  requires factions { russia, } and hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.07   2  0  requires factions { russia, }  and hidden_resource GondorWest
 				recruit_pool "Lebennin Marines"  1   0.06   2  0  requires factions { russia, }  and region_religion kings 40 and hidden_resource GondorEast and hidden_resource ResJ
 				recruit_pool "Lebennin Marines"  1   0.06   2  0  requires factions { russia, }  and region_religion kings 40 and hidden_resource GondorWest and hidden_resource ResH
 				recruit_pool "Gondor Infantry"  1   0.06   2  0  requires factions { russia, }  and region_religion kings 40 and hidden_resource GondorEast
@@ -11740,9 +11702,6 @@ building dunedain_barracks
 				recruit_pool "Khandish Raiders"  1   0.08   2  0  requires factions { turks, }  and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, }  and not event_counter reunited_kingdom 1 and hidden_resource Mordor and hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and hidden_resource GondorWest and hidden_resource ResB and event_counter reunited_kingdom 1
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and hidden_resource Enedwaith and hidden_resource ResK and event_counter reunited_kingdom 1
 				recruit_pool "Amrothian Squires"  1   0.09  2  0  requires factions { turks, } and region_religion islam 33 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResI or hidden_resource ResH
@@ -11750,9 +11709,6 @@ building dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -11760,9 +11716,6 @@ building dunedain_barracks
 				recruit_pool "Amrothian Pikemen"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 33 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResJ or hidden_resource ResK or hidden_resource ResL or hidden_resource ResM
 				recruit_pool "Amrothian Pikemen"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 33 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResI or hidden_resource ResH
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Blackroot Vale Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1  and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06   1  0  requires factions { turks, }   and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 
@@ -11931,9 +11884,6 @@ building dunedain_barracks
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Rhun and hidden_resource ResA
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -11951,9 +11901,6 @@ building dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -11969,9 +11916,6 @@ building dunedain_barracks
 				recruit_pool "Lossarnach Axemen"  1   0.09   2  0  requires factions { turks, }  and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResG
 				recruit_pool "Lossarnach Axemen"  1   0.09   2  0  requires factions { turks, }  and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResK
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12166,9 +12110,6 @@ building dunedain_barracks
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Rhun and hidden_resource ResA
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12186,9 +12127,6 @@ building dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.09   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -12212,9 +12150,6 @@ building dunedain_barracks
 				recruit_pool "Talon Knights"  1   0.07   1  0  requires factions { turks, }  and region_religion islam 75 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResJ or hidden_resource ResK or hidden_resource ResL or hidden_resource ResM
 				recruit_pool "Tirith Aear Wardens"  1  0.07  2  0  requires factions { turks, } and region_religion islam 80 and hidden_resource GondorWest and hidden_resource ResL and event_counter reunited_kingdom 1
 
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Archers"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12354,9 +12289,6 @@ building c_dunedain_barracks
 				recruit_pool "Khandish Raiders"  1   0.08   2  0  requires factions { turks, }  and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, }  and not event_counter reunited_kingdom 1 and hidden_resource Mordor and hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.112  2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResB
 				recruit_pool "Pinnath Gelin Cavalry"  1   0.09   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK
 
@@ -12365,9 +12297,6 @@ building c_dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.112  2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -12375,9 +12304,6 @@ building c_dunedain_barracks
 				recruit_pool "Amrothian Pikemen"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 33 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResJ or hidden_resource ResK or hidden_resource ResL or hidden_resource ResM
 				recruit_pool "Amrothian Pikemen"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 33 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResI or hidden_resource ResH
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.112  2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Blackroot Vale Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1  and hidden_resource GondorWest and hidden_resource ResB or hidden_resource ResE or hidden_resource ResD
 				recruit_pool "Ithilien Rangers"  1   0.06  1  0  requires factions { turks, }   and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResD or hidden_resource ResC or hidden_resource ResB or hidden_resource ResE
 
@@ -12546,9 +12472,6 @@ building c_dunedain_barracks
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Rhun and hidden_resource ResA
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.112  2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12566,9 +12489,6 @@ building c_dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -12584,9 +12504,6 @@ building c_dunedain_barracks
 				recruit_pool "Lossarnach Axemen"  1   0.095   2  0  requires factions { turks, }  and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResG
 				recruit_pool "Lossarnach Axemen"  1   0.095   2  0  requires factions { turks, }  and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResK
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12781,9 +12698,6 @@ building c_dunedain_barracks
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Rhun and hidden_resource ResA
 				recruit_pool "Variag Horse Archers"  1   0.06   2  0  requires factions { turks, } and not event_counter reunited_kingdom 1 and hidden_resource Harad and hidden_resource ResH or hidden_resource ResM
 
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Cavalry Militia"  1   0.112  2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Cavalry Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Cavalry"  1   0.1   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
@@ -12801,9 +12715,6 @@ building c_dunedain_barracks
 
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResH
 				recruit_pool "Lebennin Marines"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorEast and hidden_resource ResJ or hidden_resource ResH or hidden_resource ResI or hidden_resource ResD or hidden_resource ResE
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Territorial Guardsmen"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 20 and event_counter reunited_kingdom 1
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResC or hidden_resource ResA or hidden_resource ResM
 				recruit_pool "Anfalas Pikemen"  1  0.095   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResA
@@ -12827,9 +12738,6 @@ building c_dunedain_barracks
 				recruit_pool "Talon Knights"  1   0.07   1  0  requires factions { turks, }  and region_religion islam 75 and event_counter reunited_kingdom 1 and hidden_resource GondorWest and hidden_resource ResI or hidden_resource ResJ or hidden_resource ResK or hidden_resource ResL or hidden_resource ResM
 				recruit_pool "Tirith Aear Wardens"  1  0.07  2  0  requires factions { turks, } and region_religion islam 80 and hidden_resource GondorWest and hidden_resource ResL and event_counter reunited_kingdom 1
 
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
-				recruit_pool "Gondor Archer Militia"  1   0.112   2  0  requires factions { turks, }  and region_religion islam 25 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource GondorWest or hidden_resource GondorEast
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Enedwaith and hidden_resource ResK or hidden_resource ResA
 				recruit_pool "Gondor Archers"  1   0.095   2  0  requires factions { turks, }  and region_religion islam 50 and event_counter reunited_kingdom 1 and hidden_resource Mordor and not hidden_resource ResM and not hidden_resource ResL and not hidden_resource ResK and not hidden_resource ResJ

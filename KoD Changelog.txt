@@ -1,0 +1,5 @@
+Changlelog for Kingdom of the Dunedain
+
+Units
+-Removed Gondor militia units(sword,archer,cav)
+-
