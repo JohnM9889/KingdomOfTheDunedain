@@ -25,6 +25,17 @@ function onLoadSaveFile(paths)
     end
 end
 
+
+function onSettlementSelected(eventData)
+    print("Bazinga");
+    local settlement = eventData.settlement;
+    local settlementArmy = stratmap.game.createArmyInSettlement(settlement);
+    settlementArmy:createUnit("Gondor Infantry",1,1,1);
+    print("Bazinga");
+    --char.createUnit("Axemen of Lossarnach",1,1,1);
+    --local newUnit=stackStruct:createUnit("Axemen of Lossarnach",1,1,1);
+end
+
 -- Fires when creating a save file
 -- Returns a list of M2TWEOP save files
 function onCreateSaveFile()
@@ -68,6 +79,7 @@ function draw(pDevice)
     and (ImGui.IsKeyDown(ImGuiKey.LeftCtrl))
     then
         M2TWEOP.toggleConsole()
+        M2TWEOP.reloadScript()
     elseif (ImGui.IsKeyPressed(ImGuiKey.GraveAccent))
     and (ImGui.IsKeyDown(ImGuiKey.LeftAlt))
     then
